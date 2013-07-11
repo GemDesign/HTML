@@ -5,8 +5,10 @@
 
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-			<link rel="stylesheet" type="text/css" href="GemStyle.css" media="screen" />
-
+		<link rel="stylesheet" type="text/css" href="GemStyle.css" media="screen" />
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="Scripts/GemScripts.js"></script>
+		
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 		<title>
@@ -17,33 +19,39 @@
 
 	<body>
 	<div id = "LogoBox">
-	<div class = "sides"></div>
-	<img id = "Logo" src= "Images/gem2.png"/>
-	<div class = "sides"></div>
+		<div class = "sides"></div>
+		<img id = "Logo" src= "Images/gem2.png"/>
+		<div class = "sides"></div>
 	</div>
 	<div id = "NavBar">
 	<ul>
-		<li>WHO WE ARE</li>
-		<li>GRAPHIC DESIGN</li>
-		<li>PHOTOGRPAHY</li>
-		<li>WEB DEVELOPMENT</li>
-		<li>PORTFOLIO</li>
-		<li>GET IN TOUCH</li>
+		<li onclick = "Scrolling(WhoWeAre)">WHO WE ARE</li>
+		<li onclick = "Scrolling(GraphicDesign)">GRAPHIC DESIGN</li>
+		<li onclick = "Scrolling(Photography)">PHOTOGRPAHY</li>
+		<li onclick = "Scrolling(WebDevelopment)">WEB DEVELOPMENT</li>
+		<li onclick = "Scrolling(Porfolio)">PORTFOLIO</li>
+		<li onclick = "Scrolling(GetInTouch)">GET IN TOUCH</li>
 	</ul>
 	</div>
 	
 	<div id = "Content">
-		<div id = "WHOWEARE">
+		<div id = "WhoWeAre">
 		WHOWEARE
 		</div>
-		<div id = "GRAPHICDESIGN">
+		<div id = "GraphicDesign">
 		GRAPHICDESIGN
 		</div>
-		<div id = "PHOTOGRAPHY">
+		<div id = "Photography">
 		PHOTOGRAPHY
 		</div>
-		<div id = "WEBDEVELOPMENT">
+		<div id = "WebDevelopment">
 		WEBDEVELOPMENT
+		</div>
+		<div id = "Porfolio">
+		Porfolio
+		</div>	
+		<div id = "GetInTouch">
+		GetInTouch
 		</div>	
 	</div>
 	</body>

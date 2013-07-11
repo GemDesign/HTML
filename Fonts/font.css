@@ -1,0 +1,15 @@
+@font-face {
+	font-family: 'gothic';
+    
+    	src: url('http://fontsforweb.com/public/fonts/9785/gothic.eot');
+	src: local('gothic'), url('http://fontsforweb.com/public/fonts/9785/gothic.ttf') format('truetype');
+    }
+body.cke_show_borders p {
+	font-family: 'gothic';
+    font-size: 30px;
+}
+.fontsforweb_fontid_9785 {
+	font-family: 'gothic' !important;
+}
+
+/* Font downloaded from FontsForWeb.com */

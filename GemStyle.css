@@ -2,13 +2,28 @@
 
 /* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+/*FONTS*/
+@font-face
+{
+	font-family: Gothic;
+    src: url('Fonts/gothic.eot');
+    src: url('Fonts/gothic.eot?#iefix') format('embedded-opentype'),
+         url('Fonts/gothic.woff') format('woff'),
+         url('Fonts/TRCenturyGothic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 Body
 {
+font-family:Gothic;
 background:red;
 height:100%;
 width:100%
 }
+
+/*NAVIAGTION BAR*/
+
 #LogoBox
 {
 position:fixed;
@@ -46,12 +61,21 @@ z-index: 1;
 
 	#NavBar ul
 	{
+	margin-top:5%;
 	font-size:14px;
 	text-align:left;
 	width: 80%;
 	margin-left:20%;
-	line-height: 25px;
+	line-height: 30px;
+	font-weight:bold;
+	cursor:pointer;
 	}
+	
+	
+/*END NAVIGATION BAR*/
+
+
+/*CONTENT SECTIONS*/
 #Content
 {
 position:absolute;
@@ -60,35 +84,50 @@ height:100%;
 left:0%;
 background:pink;
 }
-	#WHOWEARE
+	#WhoWeAre
 	{
 	height:100%;
 	width:80%;
 	padding-left:20%;
 	background:#faa719;
 	}
-	#GRAPHICDESIGN
+	#GraphicDesign
 	{
 	height:100%;
 	width:80%;
 	padding-left:20%;
 	background:#00a69c;
 	}
-	#PHOTOGRAPHY
+	#Photography
 	{
 	height:100%;
 	width:80%;
 	padding-left:20%;
 	background:#f05a28;
 	}
-	#WEBDEVELOPMENT
+	#WebDevelopment
 	{
 	width:80%;
 	padding-left:20%;
 	height:100%;
-	background:pink;
+	background:#c91d67;
+	}
+	#Porfolio
+	{
+	width:80%;
+	padding-left:20%;
+	height:100%;
+	background:#faa719;
+	}
+	#GetInTouch
+	{
+	width:80%;
+	padding-left:20%;
+	height:100%;
+	background:#00a69c;
 	}
 
+/*END CONTENT SECTIONS*/
 
 
 
