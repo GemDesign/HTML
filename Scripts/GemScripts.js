@@ -1,10 +1,38 @@
 function Scrolling(sectiontogoto){
-		$('body').scrollTo(sectiontogoto, 2);
+			$('body').scrollTo(sectiontogoto, 500);
 
- };
- 
- 
- 
+};
+	
+/*SEE IF DIV IS IN VIEWPORT(NOT WORKING :(!! )*/
+	
+	$(window).scroll(function(){
+		   if (elementInViewport('#WhoWeAre') == true)
+	{
+	/*CODE TO CHANGE BUTTON COLORS WILL GO HERE*/
+	alert('works');
+	}
+	})
+
+function elementInViewport(el) {
+  var top = el.offsetTop;
+  var left = el.offsetLeft;
+  var width = el.offsetWidth;
+  var height = el.offsetHeight;
+
+  while(el.offsetParent) {
+    el = el.offsetParent;
+    top += el.offsetTop;
+    left += el.offsetLeft;
+  }
+
+  return (
+    top >= window.pageYOffset &&
+    left >= window.pageXOffset &&
+    (top + height) <= (window.pageYOffset + window.innerHeight) &&
+    (left + width) <= (window.pageXOffset + window.innerWidth)
+  );
+} 
+ /*SCROLL TO CODE*/
  /**
  * Copyright (c) 2007-2012 Ariel Flesler - aflesler(at)gmail(dot)com | http://flesler.blogspot.com
  * Dual licensed under MIT and GPL.
