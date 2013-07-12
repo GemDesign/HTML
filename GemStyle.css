@@ -9,7 +9,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     src: url('Fonts/gothic.eot');
     src: url('Fonts/gothic.eot?#iefix') format('embedded-opentype'),
          url('Fonts/gothic.woff') format('woff'),
-         url('Fonts/TRCenturyGothic.ttf') format('truetype');
+         url('Fonts/Gothic.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -87,21 +87,21 @@ background:pink;
 }
 	#WhoWeAre
 	{
-	height:110%;
+	height:100%;
 	width:80%;
 	padding-left:20%;
 	background:#faa719;
 	}
 	#GraphicDesign
 	{
-	height:110%;
+	height:100%;
 	width:80%;
 	padding-left:20%;
 	background:#00a69c;
 	}
 	#Photography
 	{
-	height:110%;
+	height:100%;
 	width:80%;
 	padding-left:20%;
 	background:#f05a28;
@@ -110,21 +110,21 @@ background:pink;
 	{
 	width:80%;
 	padding-left:20%;
-	height:110%;
+	height:100%;
 	background:#c91d67;
 	}
 	#Porfolio
 	{
 	width:80%;
 	padding-left:20%;
-	height:110%;
+	height:100%;
 	background:#faa719;
 	}
 	#GetInTouch
 	{
 	width:80%;
 	padding-left:20%;
-	height:110%;
+	height:100%;
 	background:#00a69c;
 	}
 
