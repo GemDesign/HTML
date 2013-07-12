@@ -2,36 +2,58 @@ function Scrolling(sectiontogoto){
 			$('body').scrollTo(sectiontogoto, 500);
 
 };
+
+var VisibleSection;
+$(window).scroll(function(){
+swapMenuColours('WhoWeAre')
+swapMenuColours('GraphicDesign')
+swapMenuColours('Photography')
+swapMenuColours('WebDevelopment')
+swapMenuColours('Porfolio')
+swapMenuColours('GetInTouch')
+
+	});
 	
-/*SEE IF DIV IS IN VIEWPORT(NOT WORKING :(!! )*/
-	
-	$(window).scroll(function(){
-		   if (elementInViewport('#WhoWeAre') == true)
-	{
-	/*CODE TO CHANGE BUTTON COLORS WILL GO HERE*/
-	alert('works');
-	}
-	})
-
-function elementInViewport(el) {
-  var top = el.offsetTop;
-  var left = el.offsetLeft;
-  var width = el.offsetWidth;
-  var height = el.offsetHeight;
-
-  while(el.offsetParent) {
-    el = el.offsetParent;
-    top += el.offsetTop;
-    left += el.offsetLeft;
-  }
-
-  return (
-    top >= window.pageYOffset &&
-    left >= window.pageXOffset &&
-    (top + height) <= (window.pageYOffset + window.innerHeight) &&
-    (left + width) <= (window.pageXOffset + window.innerWidth)
-  );
-} 
+function swapMenuColours(div)
+{
+var scrollTop     = $(window).scrollTop(),
+    elementOffset = $('#' + div).offset().top,
+    distance      = (elementOffset - scrollTop);
+	if(distance < 100)
+		{
+		resetMenuColor();
+		VisibleSection = div;
+		};
+switch (VisibleSection) { 
+    case 'WhoWeAre': 
+	$('#BtnWho').css('color', '#faa719');
+        break;
+    case 'GraphicDesign': 
+    $('#BtnGraphic').css('color', '#00a69c');
+        break;
+    case 'Photography': 
+    $('#BtnPhoto').css('color', '#f05a28');
+        break;      
+    case 'WebDevelopment': 
+    $('#BtnWeb').css('color', '#c91d67');
+        break;
+	case 'Porfolio': 
+    $('#BtnPort').css('color', '#faa719')
+        break;
+	case 'GetInTouch': 
+    $('#BtnGetInTouch').css('color', '#00a69c');
+        break;
+}
+};
+function resetMenuColor()
+{
+	$('#BtnWho').css('color', 'silver');
+    $('#BtnGraphic').css('color', 'silver');
+    $('#BtnPhoto').css('color', 'silver');
+    $('#BtnWeb').css('color', 'silver');
+    $('#BtnPort').css('color', 'silver');
+    $('#BtnGetInTouch').css('color', 'silver');
+};
  /*SCROLL TO CODE*/
  /**
  * Copyright (c) 2007-2012 Ariel Flesler - aflesler(at)gmail(dot)com | http://flesler.blogspot.com

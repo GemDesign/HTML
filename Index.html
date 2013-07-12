@@ -7,7 +7,7 @@
 
 		<link rel="stylesheet" type="text/css" href="GemStyle.css" media="screen" />
 		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script src="Scripts/GemScripts.js"></script>
+
 		
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
@@ -25,12 +25,12 @@
 	</div>
 	<div id = "NavBar">
 	<ul>
-		<li onclick = "Scrolling(WhoWeAre)">WHO WE ARE</li>
-		<li onclick = "Scrolling(GraphicDesign)">GRAPHIC DESIGN</li>
-		<li onclick = "Scrolling(Photography)">PHOTOGRPAHY</li>
-		<li onclick = "Scrolling(WebDevelopment)">WEB DEVELOPMENT</li>
-		<li onclick = "Scrolling(Porfolio)">PORTFOLIO</li>
-		<li onclick = "Scrolling(GetInTouch)">GET IN TOUCH</li>
+		<li id = "BtnWho" onclick = "Scrolling(WhoWeAre)">WHO WE ARE</li>
+		<li id = "BtnGraphic" onclick = "Scrolling(GraphicDesign)">GRAPHIC DESIGN</li>
+		<li id = "BtnPhoto" onclick = "Scrolling(Photography)">PHOTOGRPAHY</li>
+		<li id = "BtnWeb" onclick = "Scrolling(WebDevelopment)">WEB DEVELOPMENT</li>
+		<li id = "BtnPort" onclick = "Scrolling(Porfolio)">PORTFOLIO</li>
+		<li id = "BtnGetInTouch" onclick = "Scrolling(GetInTouch)">GET IN TOUCH</li>
 	</ul>
 	</div>
 	
@@ -54,5 +54,9 @@
 		GetInTouch
 		</div>	
 	</div>
+	
+	        
+	<script src="Scripts/GemScripts.js"></script>
+	<script src="Scripts/InViewScripts.js"></script>
 	</body>
 </html>
