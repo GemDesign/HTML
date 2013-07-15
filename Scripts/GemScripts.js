@@ -3,6 +3,11 @@ function Scrolling(sectiontogoto){
 
 };
 
+$( document ).ready(function(){
+	$('#BtnWho').css('color', '#faa719');
+});
+
+
 var VisibleSection;
 $(window).scroll(function(){
 swapMenuColours('WhoWeAre')
