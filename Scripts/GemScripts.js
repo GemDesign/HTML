@@ -14,7 +14,7 @@ swapMenuColours('WhoWeAre')
 swapMenuColours('GraphicDesign')
 swapMenuColours('Photography')
 swapMenuColours('WebDevelopment')
-swapMenuColours('Porfolio')
+swapMenuColours('MeetTheTeam')
 swapMenuColours('GetInTouch')
 
 	});
@@ -42,8 +42,8 @@ switch (VisibleSection) {
     case 'WebDevelopment': 
     $('#BtnWeb').css('color', '#c91d67');
         break;
-	case 'Porfolio': 
-    $('#BtnPort').css('color', '#faa719')
+	case 'MeetTheTeam': 
+    $('#BtnMeet').css('color', '#faa719')
         break;
 	case 'GetInTouch': 
     $('#BtnGetInTouch').css('color', '#00a69c');
@@ -56,7 +56,7 @@ function resetMenuColor()
     $('#BtnGraphic').css('color', 'silver');
     $('#BtnPhoto').css('color', 'silver');
     $('#BtnWeb').css('color', 'silver');
-    $('#BtnPort').css('color', 'silver');
+    $('#BtnMeet').css('color', 'silver');
     $('#BtnGetInTouch').css('color', 'silver');
 };
  /*SCROLL TO CODE*/

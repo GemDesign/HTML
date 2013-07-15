@@ -285,7 +285,7 @@ background:pink;
 			left:56%;
 			width:40%;
 		}
-	#Porfolio
+	#MeetTheTeam
 	{
 	position:relative;
 	width:80%;
@@ -293,6 +293,49 @@ background:pink;
 	height:100%;
 	background:#faa719;
 	}
+		#MeetTheTeam .LineDrawing
+		{
+			position:absolute;
+			left:25%;
+			top:10%;
+			width:24%;
+			height:30%;
+		}
+		#MeetTheTeam-Heading
+		{
+		position:absolute;
+		top:55%;
+		left:20%;
+		width:15%;
+		overflow:hidden;
+		}
+		#MeetTheTeam-Content
+		{
+			position:absolute;
+			padding:0px;
+			top:56%;
+			left:36%;
+			width:20%;
+		}
+		#TeamBox
+		{
+		position:absolute;
+		width: 45%;
+		top:10%;
+		height:80%;
+		right:0px;
+		padding:0%;
+		
+		}
+		.MemberSquare
+		{
+		float:left;
+		margin:1%;
+		background:white;
+		height:30%;
+		width:25%;
+		
+		}
 	#GetInTouch
 	{
 	position:relative;
