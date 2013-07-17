@@ -158,6 +158,7 @@ background:pink;
 	{
 	position:relative;
 	height:100%;
+	overflow:hidden;
 	width:80%;
 	padding-left:20%;
 	background:#00a69c;
@@ -215,6 +216,7 @@ background:pink;
 	#Photography
 	{
 	position:relative;
+	overflow:hidden;
 	height:100%;
 	width:80%;
 	padding-left:20%;
@@ -256,6 +258,7 @@ background:pink;
 	#WebDevelopment
 	{
 	position:relative;
+		overflow:hidden;
 	width:80%;
 	padding-left:20%;
 	height:100%;
@@ -287,6 +290,7 @@ background:pink;
 		}
 	#MeetTheTeam
 	{
+	overflow:hidden;
 	position:relative;
 	width:80%;
 	padding-left:20%;
@@ -343,6 +347,7 @@ background:pink;
 	padding-left:20%;
 	height:100%;
 	background:#00a69c;
+	overflow:hidden;
 	}
 		#GetInTouch .LineDrawing
 		{
@@ -358,7 +363,7 @@ background:pink;
 		text-align:left;
 		top:49%;
 		left:77%;
-		width:10%;
+		width:15%;
 		overflow:hidden;
 		}
 		#GetInTouch-Content
