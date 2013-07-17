@@ -5,6 +5,26 @@ function Scrolling(sectiontogoto){
 
 $( document ).ready(function(){
 	$('#BtnWho').css('color', '#faa719');
+	
+	$('.MemberSquare').mouseover(function(){
+		$(this).children('.Cover').css('display','block');
+		$(this).children('.Cover').fadeTo("slow",0.5);
+	});
+	$('.Cover').mouseleave(function(){
+		$(this).fadeTo("fast",0);
+		$('.Cover').css('display','none');
+	});
+	
+$('.Cover').click(function(){
+		$('#LightBoxCover').css('display','block');
+		$('#LBContent').prepend('<div class = "Picture"></div><div class = "Name">' + $(this).children('.MemName').html() + '</div><div class = "Description">"Lorem ipsum dolor sit amet</div>');
+	});
+$('.Exit').click(function(){
+		$('.Picture').remove();
+		$('.Name').remove();
+		$('.Description').remove();
+		$('#LightBoxCover').css('display','none');
+	});
 });
 
 
@@ -14,6 +34,7 @@ swapMenuColours('WhoWeAre')
 swapMenuColours('GraphicDesign')
 swapMenuColours('Photography')
 swapMenuColours('WebDevelopment')
+swapMenuColours('Portfolio')
 swapMenuColours('MeetTheTeam')
 swapMenuColours('GetInTouch')
 
@@ -42,6 +63,9 @@ switch (VisibleSection) {
     case 'WebDevelopment': 
     $('#BtnWeb').css('color', '#c91d67');
         break;
+    case 'Portfolio': 
+    $('#BtnPort').css('color', '#f05a28');
+        break;
 	case 'MeetTheTeam': 
     $('#BtnMeet').css('color', '#faa719')
         break;
@@ -56,6 +80,7 @@ function resetMenuColor()
     $('#BtnGraphic').css('color', 'silver');
     $('#BtnPhoto').css('color', 'silver');
     $('#BtnWeb').css('color', 'silver');
+	$('#BtnPort').css('color', 'silver');
     $('#BtnMeet').css('color', 'silver');
     $('#BtnGetInTouch').css('color', 'silver');
 };
