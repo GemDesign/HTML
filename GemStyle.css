@@ -22,10 +22,18 @@ width:100%
 }
 
 /*NAVIAGTION BAR*/
-
+#top
+{
+position:fixed;
+width:20%;
+height:10%;
+background:white;
+z-index: 1;
+}
 #LogoBox
 {
 position:fixed;
+top:10%;
 height:40%;
 width:20%;
 padding:0%;
@@ -33,28 +41,31 @@ background:transparent;
 color:silver;
 z-index: 1;
 }
+
 	.sides
 	{
 	float:left;
-	width: 25%;
+	width: 27.5%;
 	height:100%;
 	background:white;
 	}
 	#Logo
-	{	float:left;
-		width:50%;
+	{	
+		float:left;
+		width:45%;
 		height:100%;
 		padding-bottom:10%;
 	}
 #NavBar
 {
 position:fixed;
-top:40%;
-height:60%;
+top:49.5%;
+height:50.5%;
 width:20%;
 background:white;
 color:silver;
 z-index: 1;
+overflow:auto;
 }
 
 	#NavBar ul
@@ -258,7 +269,7 @@ background:pink;
 	#WebDevelopment
 	{
 	position:relative;
-		overflow:hidden;
+	overflow:hidden;
 	width:80%;
 	padding-left:20%;
 	height:100%;
@@ -390,15 +401,23 @@ background:pink;
 		background:white;
 		height:30%;
 		width:30%;
-		}
+		}	
+			.MemImage
+			{
+			width:100%;
+			height:100%;
+			}
 			.Cover
 			{
 			display:none;
-			position:relative;
+			top:0px;
+			left:0px;
+			position:absolute;
 			width:100%;
 			height:100%;
-			background:#c91d67;
+			background-color: rgba(201,29,103,0.8);
 			opacity:0;
+			cursor:pointer;
 			}
 				.MemName
 				{
@@ -408,7 +427,10 @@ background:pink;
 				width:100%;
 				color:white;
 				font-size:20px;
-				opacity:1;
+				}
+				.MemName
+				{
+				white-space:nowrap;
 				}
 				
 		#LightBoxCover
@@ -424,8 +446,10 @@ background:pink;
 			{
 				position:fixed;
 				background:#c91d67;
-				width:45%;
+				width:50%;
+				min-width:600px;
 				height:45%;
+				min-height:350px;
 				left:25%;
 				top:20%;
 			}
@@ -433,13 +457,25 @@ background:pink;
 				{
 				background:white;
 				position:absolute;
-				width:30%;
-				left:10%;
+				width:35%;
+				left:5%;
 				top:15%;
 				height:70%;
-				
 				}
-				
+				#Icon
+				{
+				position:absolute;
+				background-size: cover;
+				top:0px;
+				right:0px;
+				height:100%;
+				width:20%;
+				}
+					.IconImage
+					{
+					width:100%;
+					height:100%;
+					}
 				.Name
 				{
 				background:transparent;
@@ -447,11 +483,16 @@ background:pink;
 				width:40%;
 				left:50%;
 				top:15%;
-				height:20%;
+				height:15%;
 				color:white;
 				text-align:left;
-				font-size:25px;	
+				font-size:25px;
+				font-weight:bold;
 				overflow:hidden;				
+				}
+				.Desc
+				{
+				display:none;
 				}
 				.Description
 				{
@@ -460,7 +501,7 @@ background:pink;
 				width:40%;
 				left:50%;
 				top:35%;
-				height:60%;
+				height:50%;
 				color:white;
 				text-align:left;
 				font-size:16px;	
@@ -481,7 +522,7 @@ background:pink;
 	position:relative;
 	width:80%;
 	padding-left:20%;
-	height:100%;
+	height:200%;
 	background:#00a69c;
 	overflow:hidden;
 	}
@@ -489,9 +530,9 @@ background:pink;
 		{
 			position:absolute;
 			left:25%;
-			top:15%;
+			top:7.5%;
 			width:40%;
-			height:50%;
+			height:24%;
 		}
 		#GetInTouch-Heading
 		{
@@ -511,6 +552,32 @@ background:pink;
 			left:55%;
 			width:20%;
 		}
+		#dropusaline
+		{
+		position:absolute;
+		width:20%;
+		height:40%;
+		top:10%;
+		left:65%;
+		
+		}
+		#planeandinfo
+		{
+		position:absolute;
+		width:60%;
+		height:25%;
+		top:35%;
+		left:20%;
+		}
+		#carrierpigeon
+		{
+		position:absolute;
+		width:20%;
+		height:20%;
+		top:80%;
+		left:65%;
+		}
+		
 		
 /*END CONTENT SECTIONS*/
 

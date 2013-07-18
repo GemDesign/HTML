@@ -5,19 +5,40 @@ function Scrolling(sectiontogoto){
 
 $( document ).ready(function(){
 	$('#BtnWho').css('color', '#faa719');
+	var icon;
 	
-	$('.MemberSquare').mouseover(function(){
+	$('.MemberSquare').hover(function(){
+		if($(this).children('.Cover').children('.MemName').children('.MemTitle').html() == 'Web Developer')
+		{
+			$(this).children('.Cover').css('background-color','rgba(201,29,103,0.6)');
+			$('#LBContent').css('background','#c91d67');
+			icon = 'computer';
+			
+		}
+		else if($(this).children('.Cover').children('.MemName').children('.MemTitle').html() == 'Graphic Designer')
+		{
+			$(this).children('.Cover').css('background-color','rgba(0,166,156,0.6)');
+			$('#LBContent').css('background','#00a69c');
+			icon = 'pencil';
+		}
+		else if($(this).children('.Cover').children('.MemName').children('.MemTitle').html() == 'Photographer')
+		{
+			$(this).children('.Cover').css('background-color','rgba(240,90,40,0.6)');
+			$('#LBContent').css('background','#f05a28');
+			icon = 'camera';
+		}				
+		
 		$(this).children('.Cover').css('display','block');
-		$(this).children('.Cover').fadeTo("slow",0.5);
-	});
-	$('.Cover').mouseleave(function(){
-		$(this).fadeTo("fast",0);
+		$(this).children('.Cover').fadeTo("slow",1);
+	},
+	function(){
+		$(this).children('.Cover').css('opacity','0');
 		$('.Cover').css('display','none');
 	});
 	
 $('.Cover').click(function(){
 		$('#LightBoxCover').css('display','block');
-		$('#LBContent').prepend('<div class = "Picture"></div><div class = "Name">' + $(this).children('.MemName').html() + '</div><div class = "Description">"Lorem ipsum dolor sit amet</div>');
+		$('#LBContent').prepend('<div class = "Picture"><img class = "MemImage" src = "' + $('.Cover').siblings('img').attr('src') + '"/></div><div class = "Name">' + $(this).children('.MemName').html() + '<div id = "Icon"><img class = "IconImage" src = "Images/' + icon + '.png" /></div></div><div class = "Description">' + $(this).children('.Desc').html() + '</div>');
 	});
 $('.Exit').click(function(){
 		$('.Picture').remove();
