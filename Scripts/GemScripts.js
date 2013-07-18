@@ -1,8 +1,25 @@
+//FUCNTIONS//
+
+//SCROLL TO SPECIFIED SECTION
 function Scrolling(sectiontogoto){
 			$('body').scrollTo(sectiontogoto, 500);
 
 };
 
+//CODE FOR CONTACT FORM
+function clearField(field) {
+  if (field.value == field.defaultValue) {
+    field.value = "";
+  }
+}
+function checkField(field) {
+  if (field.value == "") {
+    field.value = field.defaultValue;
+  }
+}
+
+
+//
 $( document ).ready(function(){
 	$('#BtnWho').css('color', '#faa719');
 	var icon;

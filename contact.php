@@ -1,7 +1,7 @@
 <?php
 // get posted data into local variables
 $EmailFrom = Trim(stripslashes($_POST['EmailFrom'])); 
-$EmailTo = "info@gemdesign.me";
+$EmailTo = "bazdel6@gmail.com";
 $Subject = Trim(stripslashes($_POST['Subject'])); 
 $Name = Trim(stripslashes($_POST['Name'])); 
 $Comments = Trim(stripslashes($_POST['Comments'])); 
