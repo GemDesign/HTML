@@ -526,10 +526,58 @@ background:pink;
 	background:#00a69c;
 	overflow:hidden;
 	}
+		#GetInTouch form
+		{
+		position:absolute;
+		width:35%;
+		height:25%;
+		top:60%;
+		left:50%;
+		color:white;
+		}
+			#GetInTouch .contactbox
+			{
+			padding-left:2%;
+			font-size:16px;
+			width:100%;
+			margin-top:5%;
+			height:7.5%;
+			background:#00a69c;
+			border:1px solid white;
+			color:white;
+			}
+			#GetInTouch .commentbox
+			{
+			font-family:Gothic;
+			font-size:16px;
+			padding-left:2%;
+			margin-top:5%;
+			width:100%;
+			height:50%;
+			background:#00a69c;
+			border:1px solid white;
+			color:white;
+			}
+			#BtnSend
+			{
+			position:absolute;
+			width:20%;
+			height:20%;
+			top:99%;
+			left:65%;
+			}
+			#BtnSend:hover
+			{
+			position:absolute;
+			width:20%;
+			height:20%;
+			top:100%;
+			left:64%;
+			}
 		#GetInTouch .LineDrawing
 		{
 			position:absolute;
-			left:25%;
+			left:30%;
 			top:7.5%;
 			width:40%;
 			height:24%;
@@ -555,27 +603,79 @@ background:pink;
 		#dropusaline
 		{
 		position:absolute;
-		width:20%;
-		height:40%;
+		width:12%;
+		height:51%;
 		top:10%;
-		left:65%;
+		left:73.5%;
 		
 		}
 		#planeandinfo
 		{
 		position:absolute;
 		width:60%;
-		height:25%;
+		height:20%;
 		top:35%;
 		left:20%;
+		color:white;
 		}
+				#planeandinfo img
+				{
+				position:absolute;
+				left:0px;
+				top:0px;
+				z-index:1;
+				}
+				#contactdetails
+				{
+				position:absolute;
+				left:15%;
+				top:40%;
+				z-index:2;
+				}
+					#planeandinfo #Gem
+					{
+					font-size:40px;
+					z-index:2;
+					font-weight:bold;
+					}
+					#planeandinfo #Tel
+					{
+					font-size:35px;
+					z-index:2;
+					}
+					#planeandinfo #Email
+					{
+					font-size:30px;
+					z-index:2;
+					}
+					#planeandinfo #Email a
+					{
+					text-decoration:none;
+					color:white;
+					}
 		#carrierpigeon
 		{
 		position:absolute;
+		width:10%;
+		height:10%;
+		top:84%;
+		left:81%;
+		}
+		#HearFromYou
+		{
+		position:absolute;
 		width:20%;
+		height:12%;
+		top:75%;
+		left:25%;
+		}
+		#quill
+		{
+		position:absolute;
+		width:17%;
 		height:20%;
-		top:80%;
-		left:65%;
+		top:55%;
+		left:25%;
 		}
 		
 		

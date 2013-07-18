@@ -187,13 +187,24 @@
 
 		</div>
 		<div id = "GetInTouch">
+			<form method="post" id = "contact" action="contact.php">
+				<input class = "contactbox" value = "name" type="text" name="Name"/>
+				<input class = "contactbox" value = "e-mail" type="text" name="EmailFrom"/>
+				<textarea class = "commentbox" name="Comments" >message</textarea>
+				<input type="image" id = "BtnSend" src= "Images/Contact/send-button.png" alt="Submit Form" />
+			</form>
 			<div class = "LineDrawing"><img src = "Images/phone.png" alt= "phone" width= "100%" height = "100%"/></div>
-			<img id = "dropusaline" src = "Images/Contact/drop-us-a-line-text.png" alt= "Drop us a line"/>
-			<img id = "planeandinfo" src = "Images/Contact/plane-and-info.png" alt= "Pane and Info"/>
-			<img id = "dropusaline" src = "Images/Contact/drop-us-a-line-text.png" alt= "Drop us a line"/>
-			<img id = "dropusaline" src = "Images/Contact/drop-us-a-line-text.png" alt= "Drop us a line"/>
-			<img id = "dropusaline" src = "Images/Contact/drop-us-a-line-text.png" alt= "Drop us a line"/>
-			<img id = "dropusaline" src = "Images/Contact/drop-us-a-line-text.png" alt= "Drop us a line"/>
+			<img id = "dropusaline" src = "Images/Contact/drop-us-a-line.png" alt= "Drop us a line"/>
+			<div id = "planeandinfo">
+				<img src = "Images/Contact/plane-and-info.png" alt= "Pane and Info" width ="100%" height = "100%"/>
+				<span id = "contactdetails">
+					<span id = "Gem">GEM Design</span><br />
+					<span id = "Tel">Tel: (0)21 4612 345</span><br />
+					<span id = "Email"><a href="mailto:info@gemdesign.me">INFO@GEMDESIGN.ME</a></span>
+				</span>
+			</div>
+			<img id = "quill" src = "Images/Contact/quill.png" alt= "Quill"/>
+			<img id = "HearFromYou" src = "Images/Contact/hear-from-you.png" alt= "We would love to hear from you"/>
 			<img id = "carrierpigeon" src = "Images/Contact/carrierpigeon.png" alt= "Carrier Pigeon"/>
 			</div> 
 		</div>	
