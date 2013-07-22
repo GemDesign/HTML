@@ -1,3 +1,7 @@
+//GEM DESIGN
+//BARRY DELANEY
+//JULY 2013
+
 //FUCNTIONS//
 
 //SCROLL TO SPECIFIED SECTION
@@ -11,51 +15,85 @@ function clearField(field) {
   if (field.value == field.defaultValue) {
     field.value = "";
   }
-}
+};
 function checkField(field) {
   if (field.value == "") {
     field.value = field.defaultValue;
   }
-}
+};
+function validate() {
+	var Name = $('input[type="text"][name=Name]').val();
+	var Email = $('input[type="text"][name=EmailFrom]').val();
+	var Comments = $('textarea[name=Comments]').val();
+	if (Email == "" || Name == "" || Comments == ""){
+		$("#Alert").css('display', 'block');
+		$("#Alert").css('background', 'red');
+		$("#Alert").text("Please fill out all sections.")
+		return false;
+		}
+		else if(Email == "e-mail" || Name == "name" || Comments == "message")
+		{
+		$("#Alert").css('display', 'block');
+		$("#Alert").css('background', 'red');
+		$("#Alert").text("Please fill out all sections.")
+		return false;
+		}
+		else
+		{
+		$("#Alert").css('background', 'green');
+		$("#Alert").text("Message sent!")
+		$("#Name").val('name');
+		$('#EmailFrom').val('e-mail');
+		$('#Comments').val('message');
+		return true;
+		}
+};
 
 
-//
+
+//MEET THE TEAM HOVER AND CLICK CODE
 $( document ).ready(function(){
 	$('#BtnWho').css('color', '#faa719');
 	var icon;
 	
 	$('.MemberSquare').hover(function(){
-		if($(this).children('.Cover').children('.MemName').children('.MemTitle').html() == 'Web Developer')
+		if($(this).children('.Cover').children('.MemTitle').html() == 'Web Developer')
 		{
 			$(this).children('.Cover').css('background-color','rgba(201,29,103,0.6)');
 			$('#LBContent').css('background','#c91d67');
 			icon = 'computer';
 			
 		}
-		else if($(this).children('.Cover').children('.MemName').children('.MemTitle').html() == 'Graphic Designer')
+		else if($(this).children('.Cover').children('.MemTitle').html() == 'Graphic Designer')
 		{
 			$(this).children('.Cover').css('background-color','rgba(0,166,156,0.6)');
 			$('#LBContent').css('background','#00a69c');
 			icon = 'pencil';
 		}
-		else if($(this).children('.Cover').children('.MemName').children('.MemTitle').html() == 'Photographer')
+		else if($(this).children('.Cover').children('.MemTitle').html() == 'Photographer')
 		{
 			$(this).children('.Cover').css('background-color','rgba(240,90,40,0.6)');
 			$('#LBContent').css('background','#f05a28');
 			icon = 'camera';
-		}				
+		}
+		else if($(this).children('.Cover').children('.MemTitle').html() == 'Creative Director')
+		{
+			$(this).children('.Cover').css('background-color','rgba(250,167,25,.6)');
+			$('#LBContent').css('background','#faa719');
+			icon = 'lightbulb';
+		}			
 		
 		$(this).children('.Cover').css('display','block');
-		$(this).children('.Cover').fadeTo("slow",1);
+		$(this).children('.Cover').fadeTo("fast",1);
 	},
 	function(){
-		$(this).children('.Cover').css('opacity','0');
+		$(this).children('.Cover').css('opacity',0);
 		$('.Cover').css('display','none');
 	});
 	
 $('.Cover').click(function(){
 		$('#LightBoxCover').css('display','block');
-		$('#LBContent').prepend('<div class = "Picture"><img class = "MemImage" src = "' + $('.Cover').siblings('img').attr('src') + '"/></div><div class = "Name">' + $(this).children('.MemName').html() + '<div id = "Icon"><img class = "IconImage" src = "Images/' + icon + '.png" /></div></div><div class = "Description">' + $(this).children('.Desc').html() + '</div>');
+		$('#LBContent').prepend('<div class = "Picture"><img class = "MemImage" src = "' + $('.Cover').siblings('img').attr('src') + '"/></div><div class = "Name">' + $(this).children('.MemName').text() + '<br />' + $(this).children('.MemTitle').html() + '<div id = "Icon"><img class = "IconImage" src = "Images/' + icon + '.png" /></div></div><div class = "Description">' + $(this).children('.Desc').html() + '</div>');
 	});
 $('.Exit').click(function(){
 		$('.Picture').remove();
@@ -65,7 +103,7 @@ $('.Exit').click(function(){
 	});
 });
 
-
+//CHANGES MENU COLOURS AS YOU SCROLL DEPENDING ON WHAT SECTION IS ON TOP
 var VisibleSection;
 $(window).scroll(function(){
 swapMenuColours('WhoWeAre')

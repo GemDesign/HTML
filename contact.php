@@ -2,7 +2,7 @@
 // get posted data into local variables
 $EmailFrom = Trim(stripslashes($_POST['EmailFrom'])); 
 $EmailTo = "bazdel6@gmail.com";
-$Subject = Trim(stripslashes($_POST['Subject'])); 
+$Subject = "Contact Form Message"; 
 $Name = Trim(stripslashes($_POST['Name'])); 
 $Comments = Trim(stripslashes($_POST['Comments'])); 
 
@@ -24,7 +24,7 @@ $Body .= "\n";
 $Body .= "Comments: ";
 $Body .= $Comments;
 $Body .= "\n";
-$Body2 = "The following message was sent to gemdesign.me via the contact form.";
+$Body2 = "The following message was sent to GemDesign.me via the contact form.";
 $Body2 .= "\n";
 $Body2 .= "\n";
 $Body2 .= "Name: ";
@@ -40,7 +40,7 @@ $success = mail($EmailFrom, $Subject, $Body2, "From: <$EmailTo>");
 
 // redirect to success page 
 if ($success){
-  print "<meta http-equiv=\"refresh\" content=\"0;URL=Index.html\">";
+  print "<meta http-equiv=\"refresh\" content=\"0;URL=/#GetInTouch\">";
 }
 else{
   print "<meta http-equiv=\"refresh\" content=\"0;URL=Index.html\">";
