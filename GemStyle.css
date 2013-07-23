@@ -65,7 +65,7 @@ width:100%
 			opacity:.6;
 			cursor:pointer;
 			}
-			#Next:hover, #Last:hover
+			#Next:hover, #Prev:hover
 			{
 				opacity:9;
 			}
@@ -397,7 +397,7 @@ background:pink;
 		#PortBox
 		{
 		position:absolute;
-		background:white;
+		background-color: rgba(0,0,0,.2);
 		width: 55%;
 		top:0px;
 		height:100%;
@@ -431,6 +431,14 @@ background:pink;
 			bottom:0px;
 			text-align:center;
 			color:white;
+			}
+			.Page2
+			{
+			display:none;
+			}
+			.Page3
+			{
+			display:none;
 			}
 			.PortImage
 			{
