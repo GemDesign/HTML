@@ -456,9 +456,63 @@ background:pink;
 			width:86%;
 			left:10%;
 			padding:2%;
-			top:75%;
+			top:85%;
 			height:15%;	
-				}
+			}
+			.Img_2_1
+			{
+			background:transparent;
+			position:absolute;
+			width:30%;
+			left:5%;
+			top:5%;
+			height:80%;				
+			}
+			.Img_2_2
+			{
+			background:transparent;
+			position:absolute;
+			width:50%;
+			left:38%;
+			top:5%;
+			height:40%;				
+			}
+			.Img_2_3
+			{
+			background:transparent;
+			position:absolute;
+			width:50%;
+			left:38%;
+			top:50%;
+			height:35%;				
+			}
+			.Img_3_1
+			{
+			background:transparent;
+			position:absolute;
+			width:30%;
+			left:5%;
+			top:5%;
+			height:80%;				
+			}
+			.Img_3_2
+			{
+			background:transparent;
+			position:absolute;
+			width:50%;
+			left:38%;
+			top:5%;
+			height:40%;				
+			}
+			.Img_3_3
+			{
+			background:transparent;
+			position:absolute;
+			width:50%;
+			left:38%;
+			top:50%;
+			height:35%;				
+			}
 		.PortSquare:hover
 		{
 		background:blue;
