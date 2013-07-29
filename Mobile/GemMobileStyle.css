@@ -34,6 +34,30 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     font-weight: normal;
     font-style: normal;
 }
+@font-face 
+{
+    font-family: 'BN';
+    src: url('Fonts/BN/big_noodle_titling-webfont.eot');
+    src: url('Fonts/BN/big_noodle_titling-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Fonts/BN/big_noodle_titling-webfont.woff') format('woff'),
+         url('Fonts/BN/big_noodle_titling-webfont.ttf') format('truetype'),
+         url('Fonts/BN/big_noodle_titling-webfont.svg#bignoodletitlingregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face 
+{
+    font-family: 'BNO';
+    src: url('Fonts/BNO/big_noodle_titling_oblique-webfont.eot');
+    src: url('Fonts/BNO/big_noodle_titling_oblique-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Fonts/BNO/big_noodle_titling_oblique-webfont.woff') format('woff'),
+         url('Fonts/BNO/big_noodle_titling_oblique-webfont.ttf') format('truetype'),
+         url('Fonts/BNO/big_noodle_titling_oblique-webfont.svg#bignoodletitlingoblique') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 html
 {
 height:100%;
@@ -41,11 +65,210 @@ height:100%;
 Body
 {
 font-family:PT, Gothic;
-font-size:12px;
-background:red;
-max-width:100%;
-min-width:900px;
+font-size:8px;
+background:white;
+height:100%;
+width:100%;
+max-width:600px;
 }
+#LogoBox
+{
+position:fixed;
+width:100%;
+max-width:600px;
+height:20%;
+background:white;
+z-index:2;
+}
+	.sides
+	{
+	position:relative;
+	float:left;
+	width:25%;
+	height:100%;
+	background:white;
+	z-index:1;
+	}
+		#BtnBack
+		{
+		position:absolute;
+		top:30%;
+		left:10%;
+		height:30%;
+		width:60%;
+		cursor:pointer;
+		display:none;
+		}
+	#Logo
+	{
+	position:relative;
+	float:left;
+	width:50%;
+	height:100%;
+	background:white;
+	z-index:1;
+	}
+#Landing
+{
+position:fixed;
+height:80%;
+width:100%;
+max-width:600px;
+top:20%;
+}
+#CallUs
+{
+position:absolute;
+top:0px;
+width:100%;
+height:32%;
+background:white;
+}
+	#CallUsPhone
+	{
+	position:absolute;
+	left:10%;
+	top:10%;
+	height:75%;
+	width:45%
+	}
+	#CallUsButton
+	{
+	position:absolute;
+	left:60%;
+	top:10%;
+	height:80%;
+	width:30%;
+	cursor:pointer;
+	}
+
+#Menu
+{
+position:absolute;
+top:32%;
+width:100%;
+height:50%;
+background:white;
+text-align:center;
+}
+	.BtnText
+	{
+	font-family:BN;
+	top: 30%;
+	position: relative;
+	font-size:350%;
+	Color:white;
+	text-transform:uppercase;
+	}
+	.Arrow
+	{
+	position:absolute;
+	height:30%;
+	width:5%;
+	top:40%;
+	right:5%;
+	background:transparent;
+	z-index:1;
+	cursor:pointer;
+	}
+			.Arrow img
+			{
+			position:absolute;
+			height:100%;
+			width:100%;
+			left:0px;
+			top:0px;
+			}
+	#BtnWho
+	{
+	position:relative;
+	width:100%;
+	height:25%;
+	background:#faa719;
+	text-align:center;
+	}
+	#BtnPort
+	{
+	position:relative;
+	width:100%;
+	height:25%;
+	background:#f05a28;
+	text-align:center;
+	}
+	#BtnMeet
+	{
+	position:relative;
+	width:100%;
+	height:25%;
+	background:#faa719;
+	text-align:center;
+	}
+	#BtnContact
+	{
+	position:relative;
+	width:100%;
+	height:25%;
+	background:#00a69c;
+	text-align:center;
+	}
+	
+#Social
+{
+position:absolute;
+top:82%;
+width:75%;
+padding-left:12.5%;
+padding-right:12.5%;
+height:18%;
+background:white;
+}
+	.SocialIcon
+	{
+	float:left;
+	margin-top:5%;
+	margin-right:5%;
+	margin-left:5%;
+	width:10%;
+	height:50%;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 img
 {
 height:100%;
@@ -106,84 +329,16 @@ width:100%;
 				right:0px;
 				top:0px;
 				}
-/*NAVIAGTION BAR*/
-#top
-{
-position:fixed;
-width:20%;
-min-width:180px;
-height:10%;
-background:white;
-z-index: 1;
-}
-#LogoBox
-{
-position:fixed;
-top:10%;
-height:40%;
-width:20%;
-min-width:180px;
-padding:0%;
-background:transparent;
-color:silver;
-z-index: 1;
-}
-
-	.sides
-	{
-	float:left;
-	width: 27.5%;
-	height:100%;
-	background:white;
-	}
-	#Logo
-	{	
-		float:left;
-		width:45%;
-		height:100%;
-		padding-bottom:10%;
-	}
-#NavBar
-{
-position:fixed;
-top:49.5%;
-height:50.5%;
-width:20%;
-min-width:180px;
-background:white;
-color:silver;
-z-index: 1;
-overflow:auto;
-}
-
-	#NavBar ul
-	{
-	margin-top:15%;
-	font-size:16px;
-	text-align:left;
-	width: 75%;
-	margin-left:25%;
-	}
-	#NavBar li
-	{
-	margin-top:10%;
-	font-weight:bold;
-	cursor:pointer;
-	}
-	
-	
-/*END NAVIGATION BAR*/
-
 
 /*CONTENT SECTIONS*/
 #Content
 {
 position:absolute;
 width:100%;
-min-width:900px;
+max-width:600px;
 height:100%;
-min-height:600px;
 left:0%;
+display:;
 background:pink;
 }
 	.LineDrawing
@@ -192,10 +347,9 @@ background:pink;
 	}
 	.ParagraphStyle
 	{
-	text-align:justify;
 	text-transform:uppercase;
-	font-size:150%;
-	line-height:170%;
+	font-size:110%;
+	line-height:120%;
 	color: white;
 	font-weight:normal;
 	}
@@ -204,7 +358,7 @@ background:pink;
 	font-family:PT-Bold, PT, Gothic;
 	text-transform:uppercase;
 	text-align:right;
-	font-size:450%;
+	font-size:300%;
 	color: white;
 	}
 	.NoWrap
@@ -215,25 +369,24 @@ background:pink;
 	{
 	position:relative;
 	height:100%;
-	width:80%;
-	padding-left:20%;
+	width:100%;
 	background:#faa719;
 	overflow:hidden;
 	}
 		#WhoWeAre .LineDrawing
 		{
 			position:absolute;
-			left:61%;
-			top:5%;
-			width:25%;
-			height:70%;
+			left:25%;
+			bottom:0%;
+			width:40%;
+			height:50%;
 		}
 		#WhoWeAre-Heading
 		{
 			position:absolute;
-			top:30%;
-			left:20%;
-			width:20%;
+			top:25%;
+			left:0%;
+			width:30%;
 			overflow:hidden;
 
 		}
@@ -241,18 +394,18 @@ background:pink;
 		{
 			position:absolute;
 			padding:0px;
-			top:29.5%;
-			left:41%;
-			width:20%;
+			top:25%;
+			left:35%;
+			width:60%;
 		}
 		#WhoWeAre-Content2
 		{
 			text-align:right;
 			position:absolute;
 			padding:0px;
-			top:30%;
-			left:75%;
-			width:20%;
+			top:67%;
+			left:50%;
+			width:40%;
 		}
 			#WhoWeAre-Content2 a
 			{
@@ -263,36 +416,25 @@ background:pink;
 	#GraphicDesign
 	{
 	position:relative;
-	height:100%;
+	height:80%;
 	overflow:hidden;
-	width:80%;
-	padding-left:20%;
+	width:100%;
 	background:#00a69c;
 	}
 		#GraphicDesign .LineDrawing
 		{
 			position:absolute;
-			left:50%;
-			top:25%;
-			width:35%;
-			height:45%;
+			left:10%;
+			top:35%;
+			width:80%;
+			height:50%;
 		}
 		#GraphicDesign-Heading
 		{
 			position:absolute;
-			top:25%;
-			left:20%;
-			width:20%;
-			overflow:hidden;
-
-		}
-		#GraphicDesign-Heading2
-		{
-			position:absolute;
-			text-align:left;
-			top:50%;
-			left:86%;
-			width:14%;
+			top:10%;
+			left:0%;
+			width:35%;
 			overflow:hidden;
 
 		}
@@ -300,18 +442,18 @@ background:pink;
 		{
 			position:absolute;
 			padding:0px;
-			top:24.5%;
-			left:41%;
-			width:45%;
+			top:10%;
+			left:37%;
+			width:60%;
 		}
 		#GraphicDesign-Content2
 		{
 			text-align:right;
 			position:absolute;
 			padding:0px;
-			top:50%;
-			left:55%;
-			width:30%;
+			top:65%;
+			left:40%;
+			width:50%;
 		}
 			#GraphicDesign-Content2 a
 			{
@@ -323,26 +465,25 @@ background:pink;
 	{
 	position:relative;
 	overflow:hidden;
-	height:100%;
-	width:80%;
-	padding-left:20%;
+	height:80%;
+	width:100%;
 	background:#f05a28;
 	}
 		#Photography .LineDrawing
 		{
 			position:absolute;
-			left:62%;
-			top:45%;
-			width:35%;
-			height:50%;
+			left:42%;
+			top:40%;
+			width:70%;
+			height:60%;
 		}
 		#Photography-Heading
 		{
 			position:absolute;
-			top:24%;
+			top:5%;
 			text-align:left;
-			left:51%;
-			width:40%;
+			left:42%;
+			width:60%;
 			overflow:hidden;
 
 		}
@@ -350,9 +491,9 @@ background:pink;
 		{
 			position:absolute;
 			padding:0px;
-			top:24%;
-			left:30%;
-			width:20%;
+			top:5%;
+			left:0%;
+			width:40%;
 			text-align:right;
 		}
 			#Photography-Content a
@@ -365,25 +506,24 @@ background:pink;
 	{
 	position:relative;
 	overflow:hidden;
-	width:80%;
-	padding-left:20%;
-	height:100%;
+	width:100%;
+	height:80%;
 	background:#c91d67;
 	}
 		#WebDevelopment .LineDrawing
 		{
 			position:absolute;
-			left:25%;
-			top:10%;
-			width:35%;
-			height:45%;
+			left:-10%;
+			top:5%;
+			width:80%;
+			height:57%;
 		}
 		#WebDevelopment-Heading
 		{
 			position:absolute;
 			top:60%;
-			left:20%;
-			width:35%;
+			left:10%;
+			width:40%;
 			overflow:hidden;
 		}
 		#WebDevelopment-Content
@@ -391,22 +531,21 @@ background:pink;
 			position:absolute;
 			padding:0px;
 			top:59.5%;
-			left:56%;
-			width:40%;
+			left:51%;
+			width:45%;
 		}
 	#Portfolio
 	{
 	overflow:hidden;
 	position:relative;
-	width:80%;
-	padding-left:20%;
-	height:100%;
+	width:100%;
+	height:80%;
 	background:#f05a28;
 	}
 		#Portfolio .LineDrawing
 		{
 			position:absolute;
-			left:25%;
+			left:5%;
 			top:5%;
 			width:20%;
 			height:30%;
@@ -415,7 +554,7 @@ background:pink;
 		{
 		position:absolute;
 		top:45%;
-		left:25%;
+		left:5%;
 		width:15%;
 		overflow:hidden;
 		text-align:left;
@@ -425,7 +564,7 @@ background:pink;
 			position:absolute;
 			padding:0px;
 			top:75%;
-			left:25%;
+			left:5%;
 			width:20%;
 			text-align:left;
 		}
@@ -433,7 +572,7 @@ background:pink;
 		{
 		position:absolute;
 		background-color: rgba(0,0,0,.2);
-		width:50%;
+		width:70%;
 		top:5%;
 		height:90%;
 		right:2%;
@@ -567,8 +706,7 @@ background:pink;
 	{
 	overflow:hidden;
 	position:relative;
-	width:80%;
-	padding-left:20%;
+	width:100%;
 	height:100%;
 	background:#faa719;
 	}
@@ -583,9 +721,9 @@ background:pink;
 		#MeetTheTeam-Heading
 		{
 		position:absolute;
-		top:10%;
-		left:25%;
-		width:15%;
+		top:5%;
+		left:5%;
+		width:20%;
 		overflow:hidden;
 		text-align:left;
 		}
@@ -593,19 +731,19 @@ background:pink;
 		{
 			position:absolute;
 			padding:0px;
-			top:35%;
-			left:25%;
-			width:20%;
+			top:5%;
+			left:35%;
+			width:40%;
 		}
 		#TeamBox
 		{
 		position:absolute;
 		background-image:url('Images/frame.png');
 		background-size:100% 100%;
-		width:55%;
-		top:2%;
-		height:96%;
-		right:5%;
+		width:80%;
+		top:30%;
+		height:60%;
+		right:10%;
 		}
 		#TeamFrame
 		{
@@ -741,9 +879,8 @@ background:pink;
 	#GetInTouch
 	{
 	position:relative;
-	width:80%;
-	padding-left:20%;
-	height:200%;
+	width:100%;
+	height:160%;
 	background:#00a69c;
 	overflow:hidden;
 	}
@@ -813,7 +950,7 @@ background:pink;
 		#GetInTouch .LineDrawing
 		{
 			position:absolute;
-			left:30%;
+			left:10%;
 			top:7.5%;
 			width:40%;
 			height:24%;
@@ -848,10 +985,10 @@ background:pink;
 		#planeandinfo
 		{
 		position:absolute;
-		width:60%;
+		width:75%;
 		height:20%;
 		top:35%;
-		left:20%;
+		left:5%;
 		color:white;
 		}
 				#planeandinfo img
@@ -870,18 +1007,18 @@ background:pink;
 				}
 					#planeandinfo #Gem
 					{
-					font-size:40px;
+					font-size:300%;
 					z-index:2;
 					font-weight:bold;
 					}
 					#planeandinfo #Tel
 					{
-					font-size:35px;
+					font-size:250%;
 					z-index:2;
 					}
 					#planeandinfo #Email
 					{
-					font-size:30px;
+					font-size:200%;
 					z-index:2;
 					}
 					#planeandinfo #Email a
@@ -903,7 +1040,7 @@ background:pink;
 		width:20%;
 		height:12%;
 		top:75%;
-		left:25%;
+		left:5%;
 		}
 		#quill
 		{
@@ -911,146 +1048,11 @@ background:pink;
 		width:17%;
 		height:20%;
 		top:55%;
-		left:25%;
+		left:5%;
 		}
 		
 		
 /*END CONTENT SECTIONS*/
-@media screen and (max-width: 1200px)
-{
-		.MemName
-		{
-		font-size:100%;
-		}
-		.GemIcon
-		{
-		position:absolute;
-		margin:auto;
-		bottom:20%;
-		width:12%;
-		height:0%;
-		left:0%;
-		}
-		.MemTitle
-		{
-		font-size:100%;
-		}
-}
-@media screen and (max-width: 1400px)
-{
-	.ParagraphStyle
-	{
-	font-size:125%;
-	line-height:150%;
-	}
-	.HeadingStyle
-	{
-	font-size:350%;
-	}
-		#planeandinfo #Gem
-		{
-		font-size:250%;
-		z-index:2;
-		font-weight:bold;
-		}
-		#planeandinfo #Tel
-		{
-		font-size:225%;
-		z-index:2;
-		}
-		#planeandinfo #Email
-		{
-		font-size:200%;
-		z-index:2;
-		}
-		.MemName
-		{
-		font-size:100%;
-		}
-		.GemIcon
-		{
-		position:absolute;
-		margin:auto;
-		bottom:20%;
-		width:12%;
-		height:0%;
-		left:0%;
-		}
-		.MemTitle
-		{
-		font-size:100%;
-		}
-}
-@media screen and (max-width: 1000px)
-{
-	.ParagraphStyle
-	{
-	font-size:120%;
-	line-height:150%;
-	}
-	.HeadingStyle
-	{
-	font-size:250%;
-	}
-		#planeandinfo #Gem
-		{
-		font-size:200%;
-		z-index:2;
-		font-weight:bold;
-		}
-		#planeandinfo #Tel
-		{
-		font-size:175%;
-		z-index:2;
-		}
-		#planeandinfo #Email
-		{
-		font-size:150%;
-		z-index:2;
-		}
-		.MemName
-		{
-		font-size:100%;
-		}
-		.GemIcon
-		{
-		position:absolute;
-		margin:auto;
-		bottom:20%;
-		width:12%;
-		height:0%;
-		left:0%;
-		}
-		.MemTitle
-		{
-		font-size:100%;
-		}
-}
-@media screen and (max-width: 800)
-{
-	.ParagraphStyle
-	{
-	font-size:125%;
-	line-height:150%;
-	}
-	.HeadingStyle
-	{
-	font-size:250%;
-	}
-}
-@media screen and (max-width: 480)
-{
-	.ParagraphStyle
-	{
-	font-size:125%;
-	line-height:150%;
-	}
-	.HeadingStyle
-	{
-	font-size:250%;
-	}
-	
-}
 
 
 
