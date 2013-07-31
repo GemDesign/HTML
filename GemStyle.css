@@ -66,15 +66,15 @@ width:100%;
 				background:#c91d67;
 				width:50%;
 				min-width:700px;
-				height:50%;
+				height:70%;
 				min-height:400px;
 				left:25%;
-				top:20%;
+				top:15%;
 			}
 			#Next
 			{
 			position:absolute;
-			right:2%;
+			right:1%;
 			width:3%;
 			top:45%;
 			height:10%;
@@ -84,7 +84,7 @@ width:100%;
 			#Prev
 			{
 			position:absolute;
-			left:2%;
+			left:1%;
 			top:45%;
 			width:3%;
 			height:10%;
@@ -100,8 +100,8 @@ width:100%;
 				position:absolute;
 				background-image:url('Images/XButtonGem.png');
 				background-size:100%, 100%;
-				width:40px;
-				height:40px;
+				width:35px;
+				height:35px;
 				cursor:pointer;
 				right:0px;
 				top:0px;
@@ -492,18 +492,18 @@ background:pink;
 			position:absolute;
 			width:90%;
 			left:5%;
-			top:5%;
-			height:70%;	
+			top:6%;
+			height:80%;	
 			}
 			.PortInfo
 			{
 			color:white;
 			position:absolute;
-			width:86%;
-			left:10%;
-			padding:2%;
-			top:85%;
-			height:15%;	
+			width:82%;
+			left:7%;
+			padding:1%;
+			top:86%;
+			height:12%;
 			}
 			.Img_2_1
 			{

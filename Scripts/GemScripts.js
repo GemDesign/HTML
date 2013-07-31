@@ -95,6 +95,7 @@ $('.Cover').click(function(){
 		$('#Next').css('display','none');
 		$('#Prev').css('display','none');
 		$('#LightBoxCover').css('display','block');
+		$('#LBContent').css('height','50%');
 		$('#LBContent').prepend('<div class = "Picture"><img class = "MemImage" src = "' + $('.Cover').siblings('img').attr('src') + '"/></div><div class = "Name">' + $(this).children('.MemName').text() + '<br />' + $(this).children('.MemTitle').html() + '<div id = "Icon"><img class = "IconImage" src = "Images/' + icon + '.png" /></div></div><div class = "Description">' + $(this).children('.Desc').html() + '</div>');
 	});
 $('#Exit').click(function(){
@@ -134,6 +135,7 @@ $('.PortSquare').hover(function(){
 		$('#LightBoxCover').css('display','block');
 		$('#Next').css('display','block');
 		$('#Prev').css('display','block');
+		$('#LBContent').css('height','70%');
 		$('#LBContent').css('background','#f05a28');
 		$('#LBContent').prepend('<div class = "PortImage"><img src = "' + $(this).children('.Page1').children('img').attr('src') + '" width = "100%" height = "100%"/></div><div class = "PortInfo">' + $(this).children('.Page1').children('.info').text() + '</div>');
 		$('.TeaserBox').remove();

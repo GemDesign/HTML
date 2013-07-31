@@ -6,40 +6,39 @@
 
 //SCROLL TO SPECIFIED SECTION
 function Scrolling(sectiontogoto){
-			$('body').scrollTo(sectiontogoto, 500);
-
+		$('#Content').fadeIn();
+		$('#Landing').css('display','none');
+		$('#BtnBack').fadeIn();
+		var LogoHeight = parseInt($('#LogoBox').css('height'));
+		$('html,body').animate({scrollTop: $(sectiontogoto).offset().top - LogoHeight}, 500);
 };
 $( document ).ready(function(){
-$('#BtnWho').click(function(){
-		$('#Content').css('display','block');
-		$('#Landing').css('display','none');
-		$('#BtnBack').css('display', 'block');
-		location.href = "#WhoWeAre";
-		
+	$('#BtnWho').click(function(){
+			Scrolling("#WhoWeAre");
 	});
-$('#BtnPort').click(function(){
-		$('#Content').css('display','block');
-		$('#Landing').css('display','none');
-		$('#BtnBack').css('display', 'block');
-		location.href = "#Portfolio";
+	$('#BtnGraphics').click(function(){
+			Scrolling("#GraphicDesign");
 	});
-$('#BtnMeet').click(function(){
-		$('#Content').css('display','block');
-		$('#Landing').css('display','none');
-		$('#BtnBack').css('display', 'block');
-		location.href = "#MeetTheTeam";
+	$('#BtnPhoto').click(function(){
+			Scrolling("#Photography");
 	});
-$('#BtnContact').click(function(){
-		$('#Content').css('display','block');
-		$('#Landing').css('display','none');
-		$('#BtnBack').css('display', 'block');
-		location.href = "#GetInTouch";
+	$('#BtnWeb').click(function(){
+			Scrolling("#WebDevelopment");
+	});
+	$('#BtnPort').click(function(){
+			Scrolling("#Portfolio");
+	});
+	$('#BtnMeet').click(function(){
+			Scrolling("#MeetTheTeam");				
+	});
+	$('#BtnContact').click(function(){
+			Scrolling("#GetInTouch");
 	});
 	
 	
 $('#BtnBack').click(function(){
 		$('#Content').css('display','none');
-		$('#Landing').css('display','inline-block');
+		$('#Landing').fadeIn();
 		$(this).css('display', 'none');
 		$('#Logo').css('background', '#faa719');
 		
@@ -149,7 +148,7 @@ $('.PortSquare').hover(function(){
 	var myRight = myLeft + $(this).outerWidth();
 	distance = parseInt(myLeft, 10) / parseInt(myRight, 10);
 	
-	if((distance * 100) > 86)
+	if((distance * 100) > 56)
 	{
 		$(this).append('<div class = "TeaserBox""><div class = "PortImage"><img src = "' + $(this).children('.Page1').children('img').attr('src') + '" width = "100%" height = "100%"/></div><div class = "PortInfo">' + $(this).children('.Page1').children('.info').text() + '</div></div>');
 		$(this).children('.TeaserBox').css('left', '-50%');
@@ -261,7 +260,7 @@ function swapMenuColours(div)
 var scrollTop     = $(window).scrollTop(),
     elementOffset = $('#' + div).offset().top,
     distance      = (elementOffset - scrollTop);
-	if(distance < 100)
+	if(distance < 150)
 		{
 		resetMenuColor();
 		VisibleSection = div;
