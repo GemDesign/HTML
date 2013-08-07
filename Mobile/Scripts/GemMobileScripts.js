@@ -149,6 +149,11 @@ $('#Exit').click(function(){
 		$('.Description').remove();
 		$('#LightBoxCover').css('display','none');
 	});
+	$("body").on("mouseover", ".ps-toolbar-close", function(){
+		$('.ps-toolbar-close').click(function(){
+			setTimeout(function() { Scrolling("#Portfolio"); }, 0);
+		});
+	});
 });
 
 //CHANGES MENU COLOURS AS YOU SCROLL DEPENDING ON WHAT SECTION IS ON TOP
