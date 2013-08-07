@@ -91,44 +91,55 @@ $( document ).ready(function(){
 	$('#Logo').css('background', '#faa719');
 	var icon;
 	
-	$('.MemberSquare').hover(function(){
+	$('.MemberSquare').each(function() {
+	
 		if($(this).children('.Cover').children('.MemTitle').html() == 'Web Developer')
 		{
-			$(this).children('.Cover').css('background-color','rgba(201,29,103,0.6)');
+			$(this).children('.Cover').css('background-color','rgba(201,29,103,0.3)');
 			$('#LBContent').css('background','#c91d67');
 			icon = 'computer';
 			
 		}
 		else if($(this).children('.Cover').children('.MemTitle').html() == 'Graphic Designer')
 		{
-			$(this).children('.Cover').css('background-color','rgba(0,166,156,0.6)');
+			$(this).children('.Cover').css('background-color','rgba(0,166,156,0.3)');
 			$('#LBContent').css('background','#00a69c');
 			icon = 'pencil';
 		}
 		else if($(this).children('.Cover').children('.MemTitle').html() == 'Photographer')
 		{
-			$(this).children('.Cover').css('background-color','rgba(240,90,40,0.6)');
+			$(this).children('.Cover').css('background-color','rgba(240,90,40,0.3)');
 			$('#LBContent').css('background','#f05a28');
 			icon = 'camera';
 		}
 		else if($(this).children('.Cover').children('.MemTitle').html() == 'Creative Director')
 		{
-			$(this).children('.Cover').css('background-color','rgba(250,167,25,.6)');
+			$(this).children('.Cover').css('background-color','rgba(250,167,25,.3)');
 			$('#LBContent').css('background','#faa719');
 			icon = 'lightbulb';
 		}			
-		
-		$(this).children('.Cover').css('display','block');
-		$(this).children('.Cover').fadeTo("fast",1);
-	},
-	function(){
-		$(this).children('.Cover').css('opacity',0);
-		$('.Cover').css('display','none');
 	});
-	
 $('.Cover').click(function(){
-		$('#Next').css('display','none');
-		$('#Prev').css('display','none');
+		if($(this).children('.MemTitle').html() == 'Web Developer')
+		{
+			$('#LBContent').css('background','#c91d67');
+			icon = 'computer';	
+		}
+		else if($(this).children('.MemTitle').html() == 'Graphic Designer')
+		{
+			$('#LBContent').css('background','#00a69c');
+			icon = 'pencil';
+		}
+		else if($(this).children('.MemTitle').html() == 'Photographer')
+		{
+			$('#LBContent').css('background','#f05a28');
+			icon = 'camera';
+		}
+		else if($(this).children('.MemTitle').html() == 'Creative Director')
+		{
+			$('#LBContent').css('background','#faa719');
+			icon = 'lightbulb';
+		}			
 		$('#LightBoxCover').css('display','block');
 		$('#LBContent').prepend('<div class = "Picture"><img class = "MemImage" src = "' + $('.Cover').siblings('img').attr('src') + '"/></div><div class = "Name">' + $(this).children('.MemName').text() + '<br />' + $(this).children('.MemTitle').html() + '<div id = "Icon"><img class = "IconImage" src = "Images/' + icon + '.png" /></div></div><div class = "Description">' + $(this).children('.Desc').html() + '</div>');
 	});
@@ -138,104 +149,6 @@ $('#Exit').click(function(){
 		$('.Description').remove();
 		$('#LightBoxCover').css('display','none');
 	});
-	
-//PORTFOLIO CODE//
-var page1, page2, page3;
-var number = 1;
-var page;
-$('.PortSquare').hover(function(){
-	var myLeft = $(this).offset().left;
-	var myRight = myLeft + $(this).outerWidth();
-	distance = parseInt(myLeft, 10) / parseInt(myRight, 10);
-	
-	if((distance * 100) > 56)
-	{
-		$(this).append('<div class = "TeaserBox""><div class = "PortImage"><img src = "' + $(this).children('.Page1').children('img').attr('src') + '" width = "100%" height = "100%"/></div><div class = "PortInfo">' + $(this).children('.Page1').children('.info').text() + '</div></div>');
-		$(this).children('.TeaserBox').css('left', '-50%');
-	}
-	else
-	{
-		$(this).append('<div class = "TeaserBox"><div class = "PortImage"><img src = "' + $(this).children('.Page1').children('img').attr('src') + '" width = "100%" height = "100%"/></div><div class = "PortInfo">' + $(this).children('.Page1').children('.info').text() + '</div></div>');
-
-	}
-	},
-	function(){
-		$(this).children('.TeaserBox').remove();
-		$(this).children('.Info').css("display",'none');
-	});	
-	
-	$('.PortSquare').click(function(){
-		number = 1;
-		$('#LightBoxCover').css('display','block');
-		$('#Next').css('display','block');
-		$('#Prev').css('display','block');
-		$('#LBContent').css('background','#f05a28');
-		$('#LBContent').prepend('<div class = "PortImage"><img src = "' + $(this).children('.Page1').children('img').attr('src') + '" width = "100%" height = "100%"/></div><div class = "PortInfo">' + $(this).children('.Page1').children('.info').text() + '</div>');
-		$('.TeaserBox').remove();
-		page1 = $(this).children('.Page1');
-		page2 = $(this).children('.Page2')
-		page3 = $(this).children('.Page3');
-	});
-$('#Exit').click(function(){
-		clear();
-		$('#LightBoxCover').css('display','none');
-	});
-	
-function clear()
-{
-		$('.PortImage').remove();
-		$('.PortInfo').remove();
-		$('.Img_2_1').remove();
-		$('.Img_2_2').remove();
-		$('.Img_2_3').remove();
-		$('.Img_3_1').remove();
-		$('.Img_3_2').remove();
-		$('.Img_3_3').remove();	
-}
-$('#Next').click(function(){
-	
-		
-		if(number == 1)
-		{
-			page = page2;
-			clear();
-			$('#LBContent').prepend('<div class = "Img_2_1"><img src = "' + (page).children('.1').attr('src') + '" width = "100%" height = "100%"/></div>' +
-									'<div class = "Img_2_2"><img src = "' + (page).children('.2').attr('src') + '" width = "100%" height = "100%"/></div>' +
-									'<div class = "Img_2_3"><img src = "' + (page).children('.3').attr('src') + '" width = "100%" height = "100%"/></div>' +
-									'<div class = "PortInfo">' + (page).children('.info').text() + '</div>');
-			number = number + 1;
-		}
-		else if(number == 2)
-		{
-			page = page3;
-			clear();
-			$('#LBContent').prepend('<div class = "Img_3_1"><img src = "' + (page).children('.1').attr('src') + '" width = "100%" height = "100%"/></div>' +
-									'<div class = "Img_3_2"><img src = "' + (page).children('.2').attr('src') + '" width = "100%" height = "100%"/></div>' +
-									'<div class = "Img_3_3"><img src = "' + (page).children('.3').attr('src') + '" width = "100%" height = "100%"/></div>' +
-									'<div class = "PortInfo">' + (page).children('.info').text() + '</div>');
-			number = number + 1;
-		}	
-		});
-		
-$('#Prev').click(function(){	
-		if(number == 3)
-		{
-		page = page2;
-		clear();
-		$('#LBContent').prepend('<div class = "Img_2_1"><img src = "' + (page).children('.1').attr('src') + '" width = "100%" height = "100%"/></div>' +
-								'<div class = "Img_2_2"><img src = "' + (page).children('.2').attr('src') + '" width = "100%" height = "100%"/></div>' +
-								'<div class = "Img_2_3"><img src = "' + (page).children('.3').attr('src') + '" width = "100%" height = "100%"/></div>' +
-								'<div class = "PortInfo">' + (page).children('.info').text() + '</div>');
-		number = number - 1;
-		}
-		else if(number == 2)
-		{
-			page = page1;
-			clear();
-			$('#LBContent').prepend('<div class = "PortImage"><img src = "' + (page).children('img').attr('src') + '" width = "100%" height = "100%"/></div><div class = "PortInfo">' + (page).children('.info').text() + '</div>');
-			number = number - 1;
-		}	
-		});
 });
 
 //CHANGES MENU COLOURS AS YOU SCROLL DEPENDING ON WHAT SECTION IS ON TOP

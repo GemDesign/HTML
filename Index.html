@@ -13,7 +13,27 @@
 		</script>
 		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 		<script src="Scripts/GemScripts.js"></script>
+		<script type="text/javascript" src="../lib/klass.min.js"></script>
+		<script type="text/javascript" src="../code.photoswipe-3.0.5.min.js"></script>
+	
+	
+	<script type="text/javascript">
+
+		(function(window, PhotoSwipe){
 		
+			document.addEventListener('DOMContentLoaded', function(){
+			
+				var
+					options = {},
+					gallery1Instance = PhotoSwipe.attach( window.document.querySelectorAll('#Gallery1 a'), options ),
+					gallery2Instance = PhotoSwipe.attach( window.document.querySelectorAll('#Gallery2 a'), options );
+			
+			}, false);
+			
+			
+		}(window, window.Code.PhotoSwipe));
+		
+	</script>
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 		<title>
@@ -45,7 +65,7 @@
 		<div id = "LBContent">
 			<div id="Prev"><img src = "Images/arrow_left.png"/></div>
 			<div id = "Next"><img src = "Images/arrow_right.png"/></div>
-			<div id = "Exit"></div>
+			<div id = "Exit"><img src = "Images/XButtonGem.png"/></div>
 		</div>
 	</div>
 	

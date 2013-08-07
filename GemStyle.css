@@ -98,10 +98,10 @@ width:100%;
 			#Exit
 				{
 				position:absolute;
-				background-image:url('Images/XButtonGem.png');
-				background-size:100%, 100%;
+				background:transparent;
 				width:35px;
 				height:35px;
+				max-height:7%;
 				cursor:pointer;
 				right:0px;
 				top:0px;
@@ -509,7 +509,7 @@ background:pink;
 			{
 			background:transparent;
 			position:absolute;
-			width:30%;
+			width:40%;
 			left:5%;
 			top:5%;
 			height:80%;				
@@ -518,19 +518,19 @@ background:pink;
 			{
 			background:transparent;
 			position:absolute;
-			width:50%;
-			left:38%;
+			width:46%;
+			left:48%;
 			top:5%;
-			height:40%;				
+			height:45%;				
 			}
 			.Img_2_3
 			{
 			background:transparent;
 			position:absolute;
-			width:50%;
-			left:38%;
-			top:50%;
-			height:35%;				
+			width:46%;
+			left:48%;
+			top:55%;
+			height:30%;				
 			}
 			.Img_3_1
 			{

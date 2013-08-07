@@ -7,6 +7,7 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<link rel="stylesheet" type="text/css" href="GemMobileStyle.css" media="screen" />
+			<link rel="stylesheet" href="Gallery/photoswipe.css" type="text/css" rel="stylesheet" />
 		<!--<script type='text/javascript'>
 			if (screen.width > 1000) {
 			document.location = "http://www.gemdesign.me/";
@@ -14,6 +15,30 @@
 		</script>-->
 		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 		<script src="Scripts/GemMobileScripts.js"></script>
+				<script type="text/javascript" src="Gallery/lib/klass.min.js"></script>
+		<script type="text/javascript" src="Gallery/code.photoswipe-3.0.5.min.js"></script>
+	
+	
+	<script type="text/javascript">
+
+		(function(window, PhotoSwipe){
+		
+			document.addEventListener('DOMContentLoaded', function(){
+			
+				var
+					options = {},
+					gallery1Instance = PhotoSwipe.attach( window.document.querySelectorAll('#Gallery1 a'), options ),
+					gallery2Instance = PhotoSwipe.attach( window.document.querySelectorAll('#Gallery2 a'), options ),
+					gallery3Instance = PhotoSwipe.attach( window.document.querySelectorAll('#Gallery3 a'), options ),
+					gallery4Instance = PhotoSwipe.attach( window.document.querySelectorAll('#Gallery4 a'), options ),
+					gallery5Instance = PhotoSwipe.attach( window.document.querySelectorAll('#Gallery5 a'), options );
+			
+			}, false);
+			
+			
+		}(window, window.Code.PhotoSwipe));
+		
+	</script>
 		
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
@@ -24,6 +49,11 @@
 	</head>
 
 	<body>
+		<div id = "LightBoxCover">
+		<div id = "LBContent">
+			<div id = "Exit"><img src = "Images/XButtonGem.png"/></div>
+		</div>
+	</div>
 		<div id = "LogoBox">
 			<div class = "sides">
 			<div id = "BtnBack"><img src ="Images/Mobile/back_btn.png" width = "100%" height = "100%" /></div>
@@ -127,114 +157,57 @@
 			
 			<div id = "PortBox">
 				<div class = "PortSquare">
-					<div class = "Page1">
-						<img src = "Images/pencil.png" alt= "pencil" width= "100%" height = "100%"/>
-						<span class = "info">Bollywood: Indian Cuisine</span>
-					</div>
-					<div class = "Page2">
-						<img class = "1" src = "Images/computer.png" alt= "2" width= "100%" height = "100%"/>
-						<img class = "2" src = "Images/computer.png" alt= "2" width= "100%" height = "100%"/>
-						<img class = "3" src = "Images/computer.png" alt= "2" width= "100%" height = "100%"/>
-						<span class = "info">Bollywood2: Indian Cuisine</span>
-					</div>
-					<div class = "Page3">
-						<img class = "1" src = "Images/pencil.png" alt= "2" width= "100%" height = "100%"/>
-						<img class = "2" src = "Images/pencil.png" alt= "2" width= "100%" height = "100%"/>
-						<img class = "3" src = "Images/pencil.png" alt= "2" width= "100%" height = "100%"/>
-						<span class = "info">Bollywood3: Indian Cuisine</span>
-					</div>
+					<ul id="Gallery1" class="gallery">
+						<li><a href="Images/computer.png"><img src="Images/computer.png" alt="Image 001" /></a></li>
+						<li><a href="Images/computer.png"><img src="Images/pencil.png" alt="Image 002" /></a></li>
+						<li><a href="Images/computer.png"><img src="Images/computer.png" alt="Image 003" /></a></li>
+					</ul>
 				</div>
 				<div class = "PortSquare">
-					<div class = "Page1">
-						<img src = "Images/pencil.png" alt= "pencil" width= "100%" height = "100%"/>
-						<span class = "info">Bollywood: Indian Cuisine</span>
-					</div>
-					<div class = "Page2">
-						<img class = "1" src = "Images/computer.png" alt= "2" width= "100%" height = "100%"/>
-						<img class = "2" src = "Images/computer.png" alt= "2" width= "100%" height = "100%"/>
-						<img class = "3" src = "Images/computer.png" alt= "2" width= "100%" height = "100%"/>
-						<span class = "info">Bollywood2: Indian Cuisine</span>
-					</div>
-					<div class = "Page3">
-						<img class = "1" src = "Images/pencil.png" alt= "2" width= "100%" height = "100%"/>
-						<img class = "2" src = "Images/pencil.png" alt= "2" width= "100%" height = "100%"/>
-						<img class = "3" src = "Images/pencil.png" alt= "2" width= "100%" height = "100%"/>
-						<span class = "info">Bollywood3: Indian Cuisine</span>
-					</div>
+					<ul id="Gallery2" class="gallery">
+				
+					<li><a href="Images/computer.png"><img src="Images/computer.png" alt="Image 001" /></a></li>
+					<li><a href="Images/computer.png"><img src="Images/pencil.png" alt="Image 002" /></a></li>
+					<li><a href="Images/computer.png"><img src="Images/computer.png" alt="Image 003" /></a></li>
+				
+					</ul>
 				</div>
 				<div class = "PortSquare">
-					<div class = "Page1">
-						<img src = "Images/pencil.png" alt= "pencil" width= "100%" height = "100%"/>
-						<span class = "info">Bollywood: Indian Cuisine</span>
-					</div>
-					<div class = "Page2">
-						<img class = "1" src = "Images/computer.png" alt= "2" width= "100%" height = "100%"/>
-						<img class = "2" src = "Images/computer.png" alt= "2" width= "100%" height = "100%"/>
-						<img class = "3" src = "Images/computer.png" alt= "2" width= "100%" height = "100%"/>
-						<span class = "info">Bollywood2: Indian Cuisine</span>
-					</div>
-					<div class = "Page3">
-						<img class = "1" src = "Images/pencil.png" alt= "2" width= "100%" height = "100%"/>
-						<img class = "2" src = "Images/pencil.png" alt= "2" width= "100%" height = "100%"/>
-						<img class = "3" src = "Images/pencil.png" alt= "2" width= "100%" height = "100%"/>
-						<span class = "info">Bollywood3: Indian Cuisine</span>
-					</div>
+					<ul id="Gallery3" class="gallery">
+						<li><a href="Images/computer.png"><img src="Images/computer.png" alt="Image 001" /></a></li>
+						<li><a href="Images/computer.png"><img src="Images/pencil.png" alt="Image 002" /></a></li>
+						<li><a href="Images/computer.png"><img src="Images/computer.png" alt="Image 003" /></a></li>
+					</ul>
 				</div>
 				<div class = "PortSquare">
-					<div class = "Page1">
-						<img src = "Images/pencil.png" alt= "pencil" width= "100%" height = "100%"/>
-						<span class = "info">Bollywood: Indian Cuisine</span>
-					</div>
-					<div class = "Page2">
-						<img class = "1" src = "Images/computer.png" alt= "2" width= "100%" height = "100%"/>
-						<img class = "2" src = "Images/computer.png" alt= "2" width= "100%" height = "100%"/>
-						<img class = "3" src = "Images/computer.png" alt= "2" width= "100%" height = "100%"/>
-						<span class = "info">Bollywood2: Indian Cuisine</span>
-					</div>
-					<div class = "Page3">
-						<img class = "1" src = "Images/pencil.png" alt= "2" width= "100%" height = "100%"/>
-						<img class = "2" src = "Images/pencil.png" alt= "2" width= "100%" height = "100%"/>
-						<img class = "3" src = "Images/pencil.png" alt= "2" width= "100%" height = "100%"/>
-						<span class = "info">Bollywood3: Indian Cuisine</span>
-					</div>
+					<ul id="Gallery4" class="gallery">
+				
+					<li><a href="Images/computer.png"><img src="Images/computer.png" alt="Image 001" /></a></li>
+					<li><a href="Images/computer.png"><img src="Images/pencil.png" alt="Image 002" /></a></li>
+					<li><a href="Images/computer.png"><img src="Images/computer.png" alt="Image 003" /></a></li>
+					</ul>
 				</div>
 				<div class = "PortSquare">
-					<div class = "Page1">
-						<img src = "Images/pencil.png" alt= "pencil" width= "100%" height = "100%"/>
-						<span class = "info">Bollywood: Indian Cuisine</span>
-					</div>
-					<div class = "Page2">
-						<img class = "1" src = "Images/computer.png" alt= "2" width= "100%" height = "100%"/>
-						<img class = "2" src = "Images/computer.png" alt= "2" width= "100%" height = "100%"/>
-						<img class = "3" src = "Images/computer.png" alt= "2" width= "100%" height = "100%"/>
-						<span class = "info">Bollywood2: Indian Cuisine</span>
-					</div>
-					<div class = "Page3">
-						<img class = "1" src = "Images/pencil.png" alt= "2" width= "100%" height = "100%"/>
-						<img class = "2" src = "Images/pencil.png" alt= "2" width= "100%" height = "100%"/>
-						<img class = "3" src = "Images/pencil.png" alt= "2" width= "100%" height = "100%"/>
-						<span class = "info">Bollywood3: Indian Cuisine</span>
-					</div>
+					<ul id="Gallery5" class="gallery">
+						<li><a href="Images/computer.png"><img src="Images/computer.png" alt="Image 001" /></a></li>
+						<li><a href="Images/computer.png"><img src="Images/pencil.png" alt="Image 002" /></a></li>
+						<li><a href="Images/computer.png"><img src="Images/computer.png" alt="Image 003" /></a></li>
+					</ul>
 				</div>
 				<div class = "PortSquare">
-					<div class = "Page1">
-						<img src = "Images/pencil.png" alt= "pencil" width= "100%" height = "100%"/>
-						<span class = "info">Bollywood: Indian Cuisine</span>
-					</div>
-					<div class = "Page2">
-						<img class = "1" src = "Images/computer.png" alt= "2" width= "100%" height = "100%"/>
-						<img class = "2" src = "Images/computer.png" alt= "2" width= "100%" height = "100%"/>
-						<img class = "3" src = "Images/computer.png" alt= "2" width= "100%" height = "100%"/>
-						<span class = "info">Bollywood2: Indian Cuisine</span>
-					</div>
-					<div class = "Page3">
-						<img class = "1" src = "Images/pencil.png" alt= "2" width= "100%" height = "100%"/>
-						<img class = "2" src = "Images/pencil.png" alt= "2" width= "100%" height = "100%"/>
-						<img class = "3" src = "Images/pencil.png" alt= "2" width= "100%" height = "100%"/>
-						<span class = "info">Bollywood3: Indian Cuisine</span>
-					</div>
+					<ul id="Gallery6" class="gallery">
+				
+					<li><a href="Images/computer.png"><img src="Images/computer.png" alt="Image 001" /></a></li>
+					<li><a href="Images/computer.png"><img src="Images/pencil.png" alt="Image 002" /></a></li>
+					<li><a href="Images/computer.png"><img src="Images/computer.png" alt="Image 003" /></a></li>
+				
+					</ul>
 				</div>
-			</div>
+			
+					</ul>
+				</div>
+
+			
 		</div>
 		<div id = "MeetTheTeam">
 			<!--<img class = "LineDrawing" src = "Images/arrow.png" alt= "Arrow" width= "100%" height = "100%"/>-->
@@ -298,41 +271,42 @@
 					</div>
 				</div>
 				<div class = "MemberSquare">
-					<div class="Cover">
-						<span class = "MemName">Barry <span class = "Surname">Delaney</span></span>
+				<!--<img class ="MemImage" src = "Images/Team/BarryDelaney.jpg" /> -->
+					<div class="Empty">
+						<span class = "MemName">Name<span class = "Surname">Surname</span></span>
 						<img class ="GemIcon" src = "Images/gemicon.png" />
-						<span class = "MemTitle">Web Developer</span>
-						<span class = "Desc">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-						ut labore et dolore magna aliqua. Ut enim ad minim veniam."</span>
+						<span class = "MemTitle">Web Developer/Graphic Designer/Photographer/Creative Director</span>
+						<span class = "Desc">Description</span>
 					</div>
 				</div>
 				<div class = "MemberSquare">
-					<div class="Cover">
-						<span class = "MemName">Barry <span class = "Surname">Delaney</span></span>
+				<!--<img class ="MemImage" src = "Images/Team/BarryDelaney.jpg" /> -->
+					<div class="Empty">
+						<span class = "MemName">Name<span class = "Surname">Surname</span></span>
 						<img class ="GemIcon" src = "Images/gemicon.png" />
-						<span class = "MemTitle">Web Developer</span>
-						<span class = "Desc">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-						ut labore et dolore magna aliqua. Ut enim ad minim veniam."</span>
+						<span class = "MemTitle">Web Developer/Graphic Designer/Photographer/Creative Director</span>
+						<span class = "Desc">Description</span>
 					</div>
 				</div>
 				<div class = "MemberSquare">
-					<div class="Cover">
-						<span class = "MemName">Barry <span class = "Surname">Delaney</span></span>
+				<!--<img class ="MemImage" src = "Images/Team/BarryDelaney.jpg" /> -->
+					<div class="Empty">
+						<span class = "MemName">Name<span class = "Surname">Surname</span></span>
 						<img class ="GemIcon" src = "Images/gemicon.png" />
-						<span class = "MemTitle">Web Developer</span>
-						<span class = "Desc">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-						ut labore et dolore magna aliqua. Ut enim ad minim veniam."</span>
+						<span class = "MemTitle">Web Developer/Graphic Designer/Photographer/Creative Director</span>
+						<span class = "Desc">Description</span>
 					</div>
 				</div>
 				<div class = "MemberSquare">
-					<div class="Cover">
-						<span class = "MemName">Barry <span class = "Surname">Delaney</span></span>
+				<!--<img class ="MemImage" src = "Images/Team/BarryDelaney.jpg" /> -->
+					<div class="Empty">
+						<span class = "MemName">Name<span class = "Surname">Surname</span></span>
 						<img class ="GemIcon" src = "Images/gemicon.png" />
-						<span class = "MemTitle">Web Developer</span>
-						<span class = "Desc">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-						ut labore et dolore magna aliqua. Ut enim ad minim veniam."</span>
+						<span class = "MemTitle">Web Developer/Graphic Designer/Photographer/Creative Director</span>
+						<span class = "Desc">Description</span>
 					</div>
 				</div>
+
 			</div>
 			</div>
 
