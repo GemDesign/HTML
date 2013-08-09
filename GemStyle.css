@@ -446,6 +446,13 @@ background:pink;
 		height:25%;
 		width:25%;
 		}
+		.grouped_elements
+		{
+			position:absolute;
+			width:100%;
+			height:100%;
+			visibility:hidden;
+		}
 			.Page1, .Page2, .Page3
 			{
 			position: absolute;
@@ -457,6 +464,7 @@ background:pink;
 			position: absolute;
 			height:100%;
 			width:100%;
+			cursor:pointer;
 			}
 			.TeaserBox
 			{
@@ -464,10 +472,15 @@ background:pink;
 			top:0px;
 			left:0px;
 			background:#f05a28;
-			width:150%;
-			height:130%;
+			width:100%;
+			height:100%;
+			max-width:150%;
+			max-height:150%;
 			z-index:99;
-			cursor:pointer;
+			}
+			.preload
+			{
+			display:none;
 			}
 			.info
 			{
@@ -490,74 +503,25 @@ background:pink;
 			{
 			background:transparent;
 			position:absolute;
-			width:90%;
-			left:5%;
-			top:6%;
-			height:80%;	
+			width:95%;
+			left:2.5%;
+			top:3%;
+			height:97%;	
 			}
 			.PortInfo
 			{
+			background:#f05a28;
 			color:white;
 			position:absolute;
-			width:82%;
-			left:7%;
-			padding:1%;
-			top:86%;
-			height:12%;
+			width:94%;
+			padding:2%;
+			padding-left:3%;
+			padding-right:3%;
+			top:100%;
 			}
-			.Img_2_1
+			.PortInfo a
 			{
-			background:transparent;
-			position:absolute;
-			width:40%;
-			left:5%;
-			top:5%;
-			height:80%;				
-			}
-			.Img_2_2
-			{
-			background:transparent;
-			position:absolute;
-			width:46%;
-			left:48%;
-			top:5%;
-			height:45%;				
-			}
-			.Img_2_3
-			{
-			background:transparent;
-			position:absolute;
-			width:46%;
-			left:48%;
-			top:55%;
-			height:30%;				
-			}
-			.Img_3_1
-			{
-			background:transparent;
-			position:absolute;
-			width:30%;
-			left:5%;
-			top:5%;
-			height:80%;				
-			}
-			.Img_3_2
-			{
-			background:transparent;
-			position:absolute;
-			width:50%;
-			left:38%;
-			top:5%;
-			height:40%;				
-			}
-			.Img_3_3
-			{
-			background:transparent;
-			position:absolute;
-			width:50%;
-			left:38%;
-			top:50%;
-			height:35%;				
+			color:white;
 			}
 		.PortSquare:hover
 		{
@@ -814,7 +778,7 @@ background:pink;
 		{
 			position:absolute;
 			left:30%;
-			top:7.5%;
+			top:5%;
 			width:40%;
 			height:24%;
 		}
@@ -840,8 +804,8 @@ background:pink;
 		{
 		position:absolute;
 		width:12%;
-		height:51%;
-		top:10%;
+		height:56%;
+		top:5%;
 		left:73.5%;
 		
 		}
@@ -913,6 +877,38 @@ background:pink;
 		top:55%;
 		left:25%;
 		}
+		#Social
+			{
+			position:absolute;
+			left:30%;
+			top:92.5%;
+			height:10%;
+			z-index:2;
+			}
+			#SocialText
+			{
+			color:white;
+			text-transform:uppercase;
+			font-size:350%;
+			
+			}
+			#Social img
+			{
+			position:relative;
+			top:15px;
+			left:10px;
+			opacity:.8;
+			width: 60px;
+			height:60px;
+			}
+			#Social img:hover
+			{
+
+			opacity:1;
+			width: 60px;
+			height:60px;
+			
+			}
 		
 		
 /*END CONTENT SECTIONS*/
@@ -1025,6 +1021,7 @@ background:pink;
 		{
 		font-size:100%;
 		}
+		
 }
 @media screen and (max-width: 800)
 {

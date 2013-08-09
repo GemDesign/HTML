@@ -21,6 +21,42 @@ function checkField(field) {
     field.value = field.defaultValue;
   }
 };
+var tWidth;
+var tHeight;
+
+function getTeaserDimensions(src)
+{
+	var theImage = new Image();
+	theImage.src = src;
+
+	tWidth = theImage.width;
+	tHeight = theImage.height;
+	
+	var pxWidth = $('.PortSquare').width();
+	
+	if (theImage.complete)
+	{
+	var dif = tWidth/tHeight;
+		if (dif < 1)
+		{
+			tHeight = (pxWidth * 1.5);
+			tWidth = (dif * tHeight);
+		}
+		else
+		{
+			tWidth = (pxWidth * 1.5);
+			tHeight = (tWidth/dif);
+
+		}
+	}
+	else
+	{
+	tWidth = '100%';
+	tHeight = '100%';
+	}
+};
+
+
 function validate() {
 	var Name = $('input[type="text"][name=Name]').val();
 	var Email = $('input[type="text"][name=EmailFrom]').val();
@@ -105,104 +141,71 @@ $('#Exit').click(function(){
 		$('#LightBoxCover').css('display','none');
 	});
 	
+
 //PORTFOLIO CODE//
-var page1, page2, page3;
-var number = 1;
-var page;
+	//Fancybox//
+
+	/* Apply fancybox to multiple items */
+	//$("body").on("mouseover", ".PortSquare", function(){
+	$("a.grouped_elements").fancybox({
+		'transitionIn'	:	'fade',
+		'transitionOut'	:	'fade',
+		'speedIn'		:	600, 
+		'speedOut'		:	200, 
+		'overlayShow'	:	true
+	});
+	//});
+	
+	$('.PortSquare').each(function() {
+		$(this).children('.grouped_elements').filter(":first").css('visibility', 'visible');
+		$(this).children('.grouped_elements').filter(":first").prepend('<img class = "preload" src = "' + $(this).children('.grouped_elements').filter(":first").attr('href') + '"/>');
+	});
 $('.PortSquare').hover(function(){
+
+
 	var myLeft = $(this).offset().left;
 	var myRight = myLeft + $(this).outerWidth();
 	distance = parseInt(myLeft, 10) / parseInt(myRight, 10);
-	
 	if((distance * 100) > 86)
 	{
-		$(this).append('<div class = "TeaserBox""><div class = "PortImage"><img src = "' + $(this).children('.Page1').children('img').attr('src') + '" width = "100%" height = "100%"/></div><div class = "PortInfo">' + $(this).children('.Page1').children('.info').text() + '</div></div>');
-		$(this).children('.TeaserBox').css('left', '-50%');
+		getTeaserDimensions($(this).children('.grouped_elements').children('.preload').attr('src'));
+		$(this).append('<div class = "TeaserBox"><div class = "PortImage"><img src = "' + $(this).children('.grouped_elements').filter(":first").attr('href') + '" width = "100%" height = "100%" alt = ""/></div><div class = "PortInfo">' + $(this).children('.info').html() + '</div></div>');
+		if((($(this).position().top)/($('#PortBox').height())) > .7)
+		{
+			$(this).children('.TeaserBox').css('bottom', '0px');
+			$(this).children('.TeaserBox').css('top', 'auto');
+		};
+		$(this).children('.TeaserBox').css('width', tWidth);
+		$(this).children('.TeaserBox').css('height', tHeight);
+		$(this).children('.TeaserBox').css('right', '0px');
+		$(this).children('.TeaserBox').css('left', 'auto');
 	}
 	else
 	{
-		$(this).append('<div class = "TeaserBox"><div class = "PortImage"><img src = "' + $(this).children('.Page1').children('img').attr('src') + '" width = "100%" height = "100%"/></div><div class = "PortInfo">' + $(this).children('.Page1').children('.info').text() + '</div></div>');
+		getTeaserDimensions($(this).children('.grouped_elements').filter(":first").attr('href'));
 
+		$(this).append('<div class = "TeaserBox"><div class = "PortImage"><img src = "' + $(this).children('.grouped_elements').filter(":first").attr('href') + '" width = "100%" height = "100%" alt = ""/></div><div class = "PortInfo">' + $(this).children('.info').html() + '</div></div>');
+		if((($(this).position().top)/($('#PortBox').height())) > .7)
+		{
+			$(this).children('.TeaserBox').css('bottom', '0px');
+			$(this).children('.TeaserBox').css('top', 'auto');
+		};
+		$(this).children('.TeaserBox').css('width', tWidth);
+		$(this).children('.TeaserBox').css('height', tHeight);
 	}
 	},
 	function(){
 		$(this).children('.TeaserBox').remove();
 		$(this).children('.Info').css("display",'none');
-	});	
-	
-	$('.PortSquare').click(function(){
-		number = 1;
-		$('#LightBoxCover').css('display','block');
-		$('#Next').css('display','block');
-		$('#Prev').css('display','block');
-		$('#LBContent').css('height','70%');
-		$('#LBContent').css('background','#f05a28');
-		$('#LBContent').prepend('<div class = "PortImage"><img src = "' + $(this).children('.Page1').children('img').attr('src') + '" width = "100%" height = "100%"/></div><div class = "PortInfo">' + $(this).children('.Page1').children('.info').text() + '</div>');
-		$('.TeaserBox').remove();
-		page1 = $(this).children('.Page1');
-		page2 = $(this).children('.Page2')
-		page3 = $(this).children('.Page3');
-	});
-$('#Exit').click(function(){
-		clear();
-		$('#LightBoxCover').css('display','none');
 	});
 	
-function clear()
-{
-		$('.PortImage').remove();
-		$('.PortInfo').remove();
-		$('.Img_2_1').remove();
-		$('.Img_2_2').remove();
-		$('.Img_2_3').remove();
-		$('.Img_3_1').remove();
-		$('.Img_3_2').remove();
-		$('.Img_3_3').remove();	
-}
-$('#Next').click(function(){
-	
-		
-		if(number == 1)
-		{
-			page = page2;
-			clear();
-			$('#LBContent').prepend('<div class = "Img_2_1"><img src = "' + (page).children('.1').attr('src') + '" width = "100%" height = "100%"/></div>' +
-									'<div class = "Img_2_2"><img src = "' + (page).children('.2').attr('src') + '" width = "100%" height = "100%"/></div>' +
-									'<div class = "Img_2_3"><img src = "' + (page).children('.3').attr('src') + '" width = "100%" height = "100%"/></div>' +
-									'<div class = "PortInfo">' + (page).children('.info').text() + '</div>');
-			number = number + 1;
-		}
-		else if(number == 2)
-		{
-			page = page3;
-			clear();
-			$('#LBContent').prepend('<div class = "Img_3_1"><img src = "' + (page).children('.1').attr('src') + '" width = "100%" height = "100%"/></div>' +
-									'<div class = "Img_3_2"><img src = "' + (page).children('.2').attr('src') + '" width = "100%" height = "100%"/></div>' +
-									'<div class = "Img_3_3"><img src = "' + (page).children('.3').attr('src') + '" width = "100%" height = "100%"/></div>' +
-									'<div class = "PortInfo">' + (page).children('.info').text() + '</div>');
-			number = number + 1;
-		}	
+
+
+	$("body").on("mouseover", ".PortSquare", function(){
+		$('.PortImage').click(function(){
+			$('.PortImage').parent('.TeaserBox').siblings('.grouped_elements').filter(":first").click();
 		});
-		
-$('#Prev').click(function(){	
-		if(number == 3)
-		{
-		page = page2;
-		clear();
-		$('#LBContent').prepend('<div class = "Img_2_1"><img src = "' + (page).children('.1').attr('src') + '" width = "100%" height = "100%"/></div>' +
-								'<div class = "Img_2_2"><img src = "' + (page).children('.2').attr('src') + '" width = "100%" height = "100%"/></div>' +
-								'<div class = "Img_2_3"><img src = "' + (page).children('.3').attr('src') + '" width = "100%" height = "100%"/></div>' +
-								'<div class = "PortInfo">' + (page).children('.info').text() + '</div>');
-		number = number - 1;
-		}
-		else if(number == 2)
-		{
-			page = page1;
-			clear();
-			$('#LBContent').prepend('<div class = "PortImage"><img src = "' + (page).children('img').attr('src') + '" width = "100%" height = "100%"/></div><div class = "PortInfo">' + (page).children('.info').text() + '</div>');
-			number = number - 1;
-		}	
-		});
+	});
 });
 
 //CHANGES MENU COLOURS AS YOU SCROLL DEPENDING ON WHAT SECTION IS ON TOP
