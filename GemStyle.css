@@ -566,6 +566,7 @@ background:pink;
 		}
 		.MemberSquare
 		{
+		z-index:10;
 		height:29.2%;
 		width:28.75%;
 		margin-left:3.2%;
@@ -574,11 +575,90 @@ background:pink;
 		float:left;
 		overflow:hidden;
 		background-color: rgba(0,0,0,.2);
-		}	
+		}
+		.MemberSquare:nth-child(1){
+			background-image: url('Images/Team/aisling.jpg');
+			background-position: center;
+			background-size: cover;
+		}
+		.MemberSquare:nth-child(2){
+			background-image: url('Images/Team/gillian.jpg');
+			background-position: center top;
+			background-size: cover;
+		}
+		.MemberSquare:nth-child(3){
+			background-image: url('Images/Team/ger.jpg');
+			background-position: 100% 15%;
+			background-size: cover;
+		}
+		.MemberSquare:nth-child(4){
+			background-image: url('Images/Team/BarryDelaney.jpg');
+			background-position: center top;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.MemberSquare:nth-child(5){
+			background-image: url('Images/Team/robin.jpg');
+			background-position: 30%;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.MemberSquare:nth-child(6){
+			background-image: url('Images/Team/ray.jpg');
+			background-position: 20% ;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.MemberSquare:nth-child(7){
+			background-image: url('Images/Team/Sinead.jpg');
+			background-position: 50% 50%;
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+		}
+			/*IE8 Fix*/
+			.MemberSquare:first-child{
+				background-image: url('Images/Team/aisling.jpg');
+				background-position: center;
+				background-size: cover;
+			}
+			.MemberSquare:first-child  + .MemberSquare{
+				background-image: url('Images/Team/gillian.jpg');
+				background-position: center top;
+				background-size: cover;
+			}
+			.MemberSquare:first-child + .MemberSquare + .MemberSquare{
+				background-image: url('Images/Team/ger.jpg');
+				background-position: 100% 15%;
+				background-size: cover;
+			}
+			.MemberSquare:first-child + .MemberSquare + .MemberSquare + .MemberSquare{
+				background-image: url('Images/Team/BarryDelaney.jpg');
+				background-position: center top;
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+			.MemberSquare:first-child + .MemberSquare + .MemberSquare + .MemberSquare + .MemberSquare{
+				background-image: url('Images/Team/robin.jpg');
+				background-position: 30%;
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+			.MemberSquare:first-child + .MemberSquare + .MemberSquare + .MemberSquare + .MemberSquare + .MemberSquare{
+				background-image: url('Images/Team/ray.jpg');
+				background-position: 20% ;
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+			.MemberSquare:first-child + .MemberSquare + .MemberSquare + .MemberSquare + .MemberSquare + .MemberSquare + .MemberSquare{
+				background-image: url('Images/Team/Sinead.jpg');
+				background-position: 50% 50%;
+				background-size: 100% auto;
+				background-repeat: no-repeat;
+			}
 			.MemImage
 			{
 			position:absolute;
-			width: auto;
+			width: 100%;
 			height: auto;
 			}
 			.Cover
@@ -634,6 +714,9 @@ background:pink;
 				{
 				background:transparent;
 				position:absolute;
+				background-size: cover;
+				background-repeat: no-repeat;
+				overflow:hidden;
 				width:35%;
 				left:5%;
 				top:15%;

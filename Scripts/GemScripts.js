@@ -51,9 +51,9 @@ function submitFinished( response ) {
 		$("#Alert").css('display', 'block');
 		$("#Alert").css('background', '#faa719');
 		$("#Alert").text("Message sent!");
-		$("#Name").val('name');
-		$('#EmailFrom').val('e-mail');
-		$('#Comments').val('message');
+		$("#senderName").val('name');
+		$('#senderEmail').val('e-mail');
+		$('#message').val('message');
 	} 
 	else 
 	{
@@ -73,41 +73,6 @@ function checkField(field) {
   }
 };
 
-//Portfolio Teaser Resizing code
-var tWidth;
-var tHeight;
-
-function getTeaserDimensions(src)
-{
-	var theImage = new Image();
-	theImage.src = src;
-
-	tWidth = theImage.width;
-	tHeight = theImage.height;
-	
-	var pxWidth = $('.PortSquare').width();
-	
-	if (theImage.complete)
-	{
-	var dif = tWidth/tHeight;
-		if (dif < 1)
-		{
-			tHeight = (pxWidth * 1.5);
-			tWidth = (dif * tHeight);
-		}
-		else
-		{
-			tWidth = (pxWidth * 1.5);
-			tHeight = (tWidth/dif);
-
-		}
-	}
-	else
-	{
-	tWidth = '100%';
-	tHeight = '100%';
-	}
-};
 
 //MEET THE TEAM HOVER AND CLICK CODE
 $( document ).ready(function(){
@@ -155,7 +120,9 @@ $( document ).ready(function(){
 $('.Cover').click(function(){
 		$('#LightBoxCover').css('display','block');
 		$('#LBContent').css('height','50%');
-		$('#LBContent').prepend('<div class = "Picture"><img class = "MemImage" src = "' + $(this).siblings('img').attr('src') + '"/></div><div class = "Name">' + $(this).children('.MemName').text() + '<br />' + $(this).children('.MemTitle').html() + '<div id = "Icon"><img class = "IconImage" src = "Images/' + icon + '.png" /></div></div><div class = "Description">' + $(this).children('.Desc').html() + '</div>');
+		$('#LBContent').prepend('<div class = "Picture"></div><div class = "Name">' + $(this).children('.MemName').text() + '<br />' + $(this).children('.MemTitle').html() + '<div id = "Icon"><img class = "IconImage" src = "Images/' + icon + '.png" /></div></div><div class = "Description">' + $(this).children('.Desc').html() + '</div>');
+		$('.Picture').css('background-image', 	'url(' + $(this).parent('.MemberSquare').css('background-image').replace(/^url|[\(\)]/g, '') + ')');
+		$('.Picture').css('background-position', $(this).parent('.MemberSquare').css('background-position'));
 	});
 $('#Exit').click(function(){
 		$('.Picture').remove();
@@ -181,7 +148,7 @@ $('#Exit').click(function(){
 	
 	$('.PortSquare').each(function() {
 		$(this).children('.grouped_elements').filter(":first").css('visibility', 'visible');
-		$(this).children('.grouped_elements').filter(":first").prepend('<img class = "preload" src = "' + $(this).children('.grouped_elements').filter(":first").attr('href') + '"/>');
+		$(this).children('.grouped_elements').prepend('<img class = "preload" src = "' + $(this).children('.grouped_elements').filter(":first").attr('href') + '" alt = ""/>');
 	});
 $('.PortSquare').hover(function(){
 
@@ -222,7 +189,32 @@ $('.PortSquare').hover(function(){
 		$(this).children('.Info').css("display",'none');
 	});
 	
+	//Portfolio Teaser Resizing code
+	var tWidth= '100%';
+	var tHeight= '100%';
 
+	function getTeaserDimensions(src)
+	{
+		var theImage = new Image();
+		theImage.src = src;
+		tWidth = theImage.width;
+		tHeight = theImage.height;
+		
+		var pxWidth = $('.PortSquare').width();
+		
+		var dif = tWidth/tHeight;
+			if (dif < 1)
+			{
+				tHeight = (pxWidth * 1.5);
+				tWidth = (dif * tHeight);
+			}
+			else
+			{
+				tWidth = (pxWidth * 1.5);
+				tHeight = (tWidth/dif);
+
+			}
+	};
 
 	$("body").on("mouseover", ".PortSquare", function(){
 		$('.PortImage').click(function(){
