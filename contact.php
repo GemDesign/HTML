@@ -41,6 +41,7 @@ $success = mail($EmailFrom, $Subject, $Body2, "From: <$EmailTo>");
 // redirect to success page 
 if ($success){
   print "<meta http-equiv=\"refresh\" content=\"0;URL=/#GetInTouch\">";
+  echo "Message Sent!. ";
 }
 else{
   print "<meta http-equiv=\"refresh\" content=\"0;URL=Index.html\">";

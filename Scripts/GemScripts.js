@@ -11,6 +11,57 @@ function Scrolling(sectiontogoto){
 };
 
 //CODE FOR CONTACT FORM
+function submitForm() {
+  var contactForm = $(this);
+  
+  if ( !$('#senderName').val() || !$('#senderEmail').val() || !$('#message').val() )
+    {
+		$("#Alert").css('display', 'block');
+		$("#Alert").css('background', '#faa719');
+		$("#Alert").text("Please fill out all sections.")
+	}
+	else if($('#senderName').val() == 'name' || $('#senderEmail').val() == 'e-mail'|| $('#message').val() == 'message')
+	{
+		$("#Alert").css('display', 'block');
+		$("#Alert").css('background', '#faa719');
+		$("#Alert").text("Please fill out all sections.")
+	}
+	else if (($('#senderEmail').val()).indexOf('@') === -1)
+	{
+		$("#Alert").css('display', 'block');
+		$("#Alert").css('background', '#faa719');
+		$("#Alert").text("Please enter a valid e-mail address.")
+	}
+	else
+	{
+	$.ajax({
+		url: contactForm.attr( 'action' ) + "?ajax=true",
+		type: contactForm.attr( 'method' ),
+		data: contactForm.serialize(),
+		success: submitFinished
+		});
+  }
+  return false;
+};
+function submitFinished( response ) {
+  response = $.trim( response );
+ 
+  if ( response == "success" ) 
+	{
+		$("#Alert").css('display', 'block');
+		$("#Alert").css('background', '#faa719');
+		$("#Alert").text("Message sent!");
+		$("#Name").val('name');
+		$('#EmailFrom').val('e-mail');
+		$('#Comments').val('message');
+	} 
+	else 
+	{
+		$("#Alert").css('display', 'block');
+		$("#Alert").css('background', '#faa719');
+		$("#Alert").text("There was an error. Please make sure your e-mail is valid.")
+  }
+};
 function clearField(field) {
   if (field.value == field.defaultValue) {
     field.value = "";
@@ -21,6 +72,8 @@ function checkField(field) {
     field.value = field.defaultValue;
   }
 };
+
+//Portfolio Teaser Resizing code
 var tWidth;
 var tHeight;
 
@@ -56,39 +109,11 @@ function getTeaserDimensions(src)
 	}
 };
 
-
-function validate() {
-	var Name = $('input[type="text"][name=Name]').val();
-	var Email = $('input[type="text"][name=EmailFrom]').val();
-	var Comments = $('textarea[name=Comments]').val();
-	if (Email == "" || Name == "" || Comments == ""){
-		$("#Alert").css('display', 'block');
-		$("#Alert").css('background', 'red');
-		$("#Alert").text("Please fill out all sections.")
-		return false;
-		}
-		else if(Email == "e-mail" || Name == "name" || Comments == "message")
-		{
-		$("#Alert").css('display', 'block');
-		$("#Alert").css('background', 'red');
-		$("#Alert").text("Please fill out all sections.")
-		return false;
-		}
-		else
-		{
-		$("#Alert").css('background', 'green');
-		$("#Alert").text("Message sent!")
-		$("#Name").val('name');
-		$('#EmailFrom').val('e-mail');
-		$('#Comments').val('message');
-		return true;
-		}
-};
-
-
-
 //MEET THE TEAM HOVER AND CLICK CODE
 $( document ).ready(function(){
+
+	$('#contact').submit( submitForm );
+
 	$('#BtnWho').css('color', '#faa719');
 	var icon;
 	
@@ -128,11 +153,9 @@ $( document ).ready(function(){
 	});
 	
 $('.Cover').click(function(){
-		$('#Next').css('display','none');
-		$('#Prev').css('display','none');
 		$('#LightBoxCover').css('display','block');
 		$('#LBContent').css('height','50%');
-		$('#LBContent').prepend('<div class = "Picture"><img class = "MemImage" src = "' + $('.Cover').siblings('img').attr('src') + '"/></div><div class = "Name">' + $(this).children('.MemName').text() + '<br />' + $(this).children('.MemTitle').html() + '<div id = "Icon"><img class = "IconImage" src = "Images/' + icon + '.png" /></div></div><div class = "Description">' + $(this).children('.Desc').html() + '</div>');
+		$('#LBContent').prepend('<div class = "Picture"><img class = "MemImage" src = "' + $(this).siblings('img').attr('src') + '"/></div><div class = "Name">' + $(this).children('.MemName').text() + '<br />' + $(this).children('.MemTitle').html() + '<div id = "Icon"><img class = "IconImage" src = "Images/' + icon + '.png" /></div></div><div class = "Description">' + $(this).children('.Desc').html() + '</div>');
 	});
 $('#Exit').click(function(){
 		$('.Picture').remove();
@@ -182,7 +205,7 @@ $('.PortSquare').hover(function(){
 	}
 	else
 	{
-		getTeaserDimensions($(this).children('.grouped_elements').filter(":first").attr('href'));
+		getTeaserDimensions($(this).children('.grouped_elements').children('.preload').attr('src'));
 
 		$(this).append('<div class = "TeaserBox"><div class = "PortImage"><img src = "' + $(this).children('.grouped_elements').filter(":first").attr('href') + '" width = "100%" height = "100%" alt = ""/></div><div class = "PortInfo">' + $(this).children('.info').html() + '</div></div>');
 		if((($(this).position().top)/($('#PortBox').height())) > .7)

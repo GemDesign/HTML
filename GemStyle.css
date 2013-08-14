@@ -65,9 +65,8 @@ width:100%;
 				position:fixed;
 				background:#c91d67;
 				width:50%;
-				min-width:700px;
-				height:70%;
-				min-height:400px;
+				min-width:500px;
+				height:60%;
 				left:25%;
 				top:15%;
 			}
@@ -453,12 +452,6 @@ background:pink;
 			height:100%;
 			visibility:hidden;
 		}
-			.Page1, .Page2, .Page3
-			{
-			position: absolute;
-			height:100%;
-			width:100%;
-			}
 			.PortImage img, .Page1 img
 			{
 			position: absolute;
@@ -490,14 +483,6 @@ background:pink;
 			bottom:0px;
 			text-align:center;
 			color:white;
-			}
-			.Page2
-			{
-			display:none;
-			}
-			.Page3
-			{
-			display:none;
 			}
 			.PortImage
 			{
@@ -564,8 +549,6 @@ background:pink;
 		#TeamBox
 		{
 		position:absolute;
-		background-image:url('Images/frame.png');
-		background-size:100% 100%;
 		width:55%;
 		top:2%;
 		height:96%;
@@ -589,13 +572,14 @@ background:pink;
 		margin-bottom:4.2%;
 		position:relative;
 		float:left;
+		overflow:hidden;
 		background-color: rgba(0,0,0,.2);
 		}	
 			.MemImage
 			{
 			position:absolute;
-			width:100%;
-			height:100%;
+			width: auto;
+			height: auto;
 			}
 			.Cover
 			{
@@ -648,7 +632,7 @@ background:pink;
 			/*Lighbox*/
 				.Picture
 				{
-				background:white;
+				background:transparent;
 				position:absolute;
 				width:35%;
 				left:5%;
@@ -658,9 +642,8 @@ background:pink;
 				#Icon
 				{
 				position:absolute;
-				background-size: cover;
 				top:0px;
-				right:0px;
+				right:-20%;
 				height:100%;
 				width:20%;
 				}
@@ -680,9 +663,8 @@ background:pink;
 				height:15%;
 				color:white;
 				text-align:left;
-				font-size:25px;
-				font-weight:bold;
-				overflow:hidden;				
+				font-size:200%;
+				font-weight:bold;			
 				}
 				.Desc
 				{
@@ -698,7 +680,7 @@ background:pink;
 				height:50%;
 				color:white;
 				text-align:left;
-				font-size:16px;	
+				font-size:150%;	
 				overflow:auto;
 				}
 
@@ -765,8 +747,8 @@ background:pink;
 			top: 100%;
 			left: 0;
 			padding: 2%;
-			width: auto;
-			height: 4%;
+			width: 40%;
+			height: auto;
 			color: white;
 			text-align: center;
 			background: red;
@@ -883,7 +865,6 @@ background:pink;
 			left:30%;
 			top:92.5%;
 			height:10%;
-			z-index:2;
 			}
 			#SocialText
 			{
@@ -895,19 +876,16 @@ background:pink;
 			#Social img
 			{
 			position:relative;
+			padding-left: 10px;
 			top:15px;
-			left:10px;
+			left:15px;
 			opacity:.8;
-			width: 60px;
-			height:60px;
+			width: auto;
+			height:auto;
 			}
 			#Social img:hover
 			{
-
-			opacity:1;
-			width: 60px;
-			height:60px;
-			
+			opacity:1;		
 			}
 		
 		
@@ -976,6 +954,14 @@ background:pink;
 		{
 		font-size:100%;
 		}
+		.Name
+		{
+		font-size:150%;
+		}
+		.Description
+		{
+		font-size:120%;
+		}
 }
 @media screen and (max-width: 1000px)
 {
@@ -1018,6 +1004,14 @@ background:pink;
 		left:0%;
 		}
 		.MemTitle
+		{
+		font-size:100%;
+		}
+		.Name
+		{
+		font-size:125%;
+		}
+		.Description
 		{
 		font-size:100%;
 		}
