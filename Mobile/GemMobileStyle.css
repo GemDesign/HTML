@@ -60,15 +60,12 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 }
 html
 {
-height:100%;
 }
 Body
 {
 font-family:PT, Gothic;
 font-size:14px;
 background:white;
-height:100%;
-width:100%;
 max-width:1000px;
 }
 @media screen and (max-width: 1000px)
@@ -99,13 +96,13 @@ max-width:1000px;
 	font-size:8px;
 	}
 }
-
+/*FIXED LOGO BOX*/
 #LogoBox
 {
 position:fixed;
 width:100%;
 max-width:1000px;
-height:20%;
+height:25%;
 background:white;
 z-index:3;
 }
@@ -134,44 +131,19 @@ z-index:3;
 	float:left;
 	width:50%;
 	height:100%;
-	background:white;
 	z-index:1;
 	}
+	
+	
+/*LANDING PAGE*/
 #Landing
 {
 position:fixed;
-height:80%;
+height:75%;
 width:100%;
 max-width:1000px;
-top:20%;
+top:25%;
 }
-/*Remove*/
-#CallUs
-{
-position:absolute;
-top:0px;
-width:100%;
-height:32%;
-background:white;
-}
-	#CallUsPhone
-	{
-	position:absolute;
-	left:10%;
-	top:10%;
-	height:75%;
-	width:45%
-	}
-	#CallUsButton
-	{
-	position:absolute;
-	left:60%;
-	top:10%;
-	height:80%;
-	width:30%;
-	cursor:pointer;
-	}
-/**/
 #Menu
 {
 position:absolute;
@@ -221,7 +193,7 @@ text-align:center;
 	{
 	position:relative;
 	width:100%;
-	height:14%;
+	height:15%;
 	background:#00a69c;
 	text-align:center;
 	}
@@ -229,7 +201,7 @@ text-align:center;
 	{
 	position:relative;
 	width:100%;
-	height:14%;
+	height:15%;
 	background:#f05a28;
 	text-align:center;
 	}
@@ -237,7 +209,7 @@ text-align:center;
 	{
 	position:relative;
 	width:100%;
-	height:14%;
+	height:15%;
 	background:#c91d67;
 	text-align:center;
 	}
@@ -245,7 +217,7 @@ text-align:center;
 	{
 	position:relative;
 	width:100%;
-	height:14%;
+	height:15%;
 	background:#f05a28;
 	text-align:center;
 	}
@@ -253,7 +225,7 @@ text-align:center;
 	{
 	position:relative;
 	width:100%;
-	height:14%;
+	height:15%;
 	background:#faa719;
 	text-align:center;
 	}
@@ -261,41 +233,33 @@ text-align:center;
 	{
 	position:relative;
 	width:100%;
-	height:14%;
+	height:15%;
 	background:#00a69c;
 	text-align:center;
 	}
-	
+
 #Social
 {
 position:absolute;
-top:82%;
+top:88%;
 width:90%;
 padding-left:5%;
 padding-right:5%;
-height:18%;
+height:11%;
 background:white;
 }
 	.SocialIcon
 	{
 	float:left;
-	margin-top:5%;
 	margin-right:3.33%;
 	margin-left:3.33%;
 	width:10%;
-	height:50%;
+	height:80%;
 	}
+/*END LANDING SECTIONS*/
 
 
-
-
-
-
-
-
-
-
-
+/*POPUP BOX FOR MEET THE TEAM*/
 img
 {
 height:100%;
@@ -316,46 +280,23 @@ width:100%;
 				background:#c91d67;
 				width:90%;
 				max-width:900px;
-				height:70%;
+				height:90%;
 				left:5%;
-				top:15%;
-			}
-			#Next
-			{
-			position:absolute;
-			right:2%;
-			width:3%;
-			top:45%;
-			height:10%;
-			opacity:.6;
-			cursor:pointer;
-			}
-			#Prev
-			{
-			position:absolute;
-			left:2%;
-			top:45%;
-			width:3%;
-			height:10%;
-			opacity:.6;
-			cursor:pointer;
-			}
-			#Next:hover, #Prev:hover
-			{
-				opacity:9;
+				top:5%;
 			}
 			#Exit
 				{
 				position:absolute;
 				background-image:url('Images/XButtonGem.png');
-				background-size:100%, 100%;
+				background-size:100%, auto;
 				width:30px;
 				height:30px;
 				cursor:pointer;
-				right:1px;
-				top:1px;
+				right:5px;
+				top:5px;
 				}
-
+/*END POPUP BOX SECTION*/
+				
 /*CONTENT SECTIONS*/
 #Content
 {
@@ -601,7 +542,6 @@ background:pink;
 		width:100%;
 		top:25%;
 		height:75%;
-		max-height:auto;
 		left:0%;
 		}
 		.PortSquare
@@ -691,7 +631,49 @@ background:pink;
 		position:relative;
 		float:left;
 		background-color: rgba(0,0,0,.2);
-		}	
+		}
+		.MemberSquare:nth-child(1){
+			background-image: url('Images/Team/aisling.jpg');
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.MemberSquare:nth-child(2){
+			background-image: url('Images/Team/gillian.jpg');
+			background-position: center top;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.MemberSquare:nth-child(3){
+			background-image: url('Images/Team/ger.jpg');
+			background-position: 100% 15%;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.MemberSquare:nth-child(4){
+			background-image: url('Images/Team/BarryDelaney.jpg');
+			background-position: center top;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.MemberSquare:nth-child(5){
+			background-image: url('Images/Team/robin.jpg');
+			background-position: 30%;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.MemberSquare:nth-child(6){
+			background-image: url('Images/Team/ray.jpg');
+			background-position: 20% ;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.MemberSquare:nth-child(7){
+			background-image: url('Images/Team/Sinead.jpg');
+			background-position: 50% 50%;
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+		}
 			.MemImage
 			{
 			position:absolute;
@@ -760,33 +742,32 @@ background:pink;
 				{
 				background:white;
 				position:absolute;
+				background-size: cover;
+				background-repeat: no-repeat;
 				width:60%;
-				left:15%;
+				left:20%;
 				top:5%;
-				height:50%;
+				height:45%;
 				}
 				#Icon
 				{
 				position:absolute;
 				background-size: cover;
-				top:0px;
-				right:0px;
-				height:70%;
-				width:20%;
+				background-size: contain;
+				background-repeat: no-repeat;
+				top: -5%;
+				right: 0%;
+				height: 80%;
+				width: 30%;
 				}
-					.IconImage
-					{
-					width:100%;
-					height:100%;
-					}
 				.Name
 				{
 				background:transparent;
 				position:absolute;
 				font-weight:normal;
 				width:80%;
-				left:15%;
-				top:60%;
+				left:10%;
+				top:55%;
 				height:11%;
 				color:white;
 				text-align:left;
@@ -803,9 +784,9 @@ background:pink;
 				background:transparent;
 				position:absolute;
 				width:80%;
-				left:15%;
-				top:75%;
-				height:25%;
+				left:10%;
+				top:65%;
+				height:30%;
 				color:white;
 				text-align:left;
 				font-size:140%;	
@@ -855,23 +836,23 @@ background:pink;
 			#BtnSend
 			{
 			position:absolute;
-			width:40%;
+			width:30%;
 			height:20%;
 			top:99%;
-			left:45%;
+			left:61%;
 			}
 			#BtnSend:hover
 			{
 			position:absolute;
-			width:40%;
+			width:30%;
 			height:20%;
 			top:100%;
-			left:44%;
+			left:60%;
 			}
 			#Alert
 			{
 			position: absolute;
-			top: 100%;
+			top: 90%;
 			left: 0;
 			padding: 2%;
 			width: auto;
@@ -951,6 +932,10 @@ background:pink;
 					{
 					font-size:175%;
 					z-index:2;
+					}
+					#planeandinfo #Tel a
+					{
+					color:white;
 					}
 					#planeandinfo #Email
 					{

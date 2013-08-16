@@ -70,40 +70,16 @@ width:100%;
 				left:25%;
 				top:15%;
 			}
-			#Next
-			{
-			position:absolute;
-			right:1%;
-			width:3%;
-			top:45%;
-			height:10%;
-			opacity:.6;
-			cursor:pointer;
-			}
-			#Prev
-			{
-			position:absolute;
-			left:1%;
-			top:45%;
-			width:3%;
-			height:10%;
-			opacity:.6;
-			cursor:pointer;
-			}
-			#Next:hover, #Prev:hover
-			{
-				opacity:9;
-			}
 			#Exit
 				{
 				position:absolute;
-				background:transparent;
-				width:35px;
-				height:35px;
-				max-height:7%;
+				background-image:url('Images/XButtonGem.png');
+				background-size:100%, auto;
+				width:40px;
+				height:40px;
 				cursor:pointer;
-				right:0px;
-				top:0px;
+				right:10px;
+				top:10px;
 				}
 /*NAVIAGTION BAR*/
 #top
@@ -119,7 +95,7 @@ z-index: 1;
 {
 position:fixed;
 top:10%;
-height:40%;
+height:40.2%;
 width:20%;
 min-width:180px;
 padding:0%;
@@ -127,25 +103,24 @@ background:transparent;
 color:silver;
 z-index: 1;
 }
-
 	.sides
 	{
 	float:left;
-	width: 27.5%;
+	width: 27%;
 	height:100%;
 	background:white;
 	}
 	#Logo
 	{	
-		float:left;
-		width:45%;
-		height:100%;
-		padding-bottom:10%;
+	float:left;
+	width:46%;
+	height:100%;
+	padding-bottom:10%;
 	}
 #NavBar
 {
 position:fixed;
-top:49.5%;
+top:49.7%;
 height:50.5%;
 width:20%;
 min-width:180px;
@@ -154,7 +129,6 @@ color:silver;
 z-index: 1;
 overflow:auto;
 }
-
 	#NavBar ul
 	{
 	margin-top:15%;
@@ -343,7 +317,6 @@ background:pink;
 			left:51%;
 			width:40%;
 			overflow:hidden;
-
 		}
 		#Photography-Content
 		{
@@ -404,11 +377,11 @@ background:pink;
 	}
 		#Portfolio .LineDrawing
 		{
-			position:absolute;
-			left:25%;
-			top:5%;
-			width:20%;
-			height:30%;
+		position:absolute;
+		left:25%;
+		top:5%;
+		width:20%;
+		height:30%;
 		}
 		#Portfolio-Heading
 		{
@@ -421,12 +394,12 @@ background:pink;
 		}
 		#Portfolio-Content
 		{
-			position:absolute;
-			padding:0px;
-			top:75%;
-			left:25%;
-			width:20%;
-			text-align:left;
+		position:absolute;
+		padding:0px;
+		top:75%;
+		left:25%;
+		width:20%;
+		text-align:left;
 		}
 		#PortBox
 		{
@@ -445,13 +418,13 @@ background:pink;
 		height:25%;
 		width:25%;
 		}
-		.grouped_elements
-		{
+			.grouped_elements
+			{
 			position:absolute;
 			width:100%;
 			height:100%;
 			visibility:hidden;
-		}
+			}
 			.PortImage img, .Page1 img
 			{
 			position: absolute;
@@ -474,6 +447,8 @@ background:pink;
 			.preload
 			{
 			display:none;
+			height:auto;
+			width:auto;
 			}
 			.info
 			{
@@ -508,10 +483,6 @@ background:pink;
 			{
 			color:white;
 			}
-		.PortSquare:hover
-		{
-		background:blue;
-		}
 	#MeetTheTeam
 	{
 	overflow:hidden;
@@ -523,11 +494,11 @@ background:pink;
 	}
 		#MeetTheTeam .LineDrawing
 		{
-			position:absolute;
-			left:25%;
-			top:10%;
-			width:24%;
-			height:30%;
+		position:absolute;
+		left:25%;
+		top:10%;
+		width:24%;
+		height:30%;
 		}
 		#MeetTheTeam-Heading
 		{
@@ -540,11 +511,11 @@ background:pink;
 		}
 		#MeetTheTeam-Content
 		{
-			position:absolute;
-			padding:0px;
-			top:35%;
-			left:25%;
-			width:20%;
+		position:absolute;
+		padding:0px;
+		top:35%;
+		left:25%;
+		width:20%;
 		}
 		#TeamBox
 		{
@@ -655,6 +626,8 @@ background:pink;
 				background-size: 100% auto;
 				background-repeat: no-repeat;
 			}
+			/*END IE8 FIX*/
+			
 			.MemImage
 			{
 			position:absolute;
@@ -725,16 +698,14 @@ background:pink;
 				#Icon
 				{
 				position:absolute;
-				top:0px;
-				right:-20%;
-				height:100%;
-				width:20%;
+				background-size: cover;
+				background-size: contain;
+				background-repeat: no-repeat;
+				top: -5%;
+				right: -20%;
+				height: 90%;
+				width: 40%;
 				}
-					.IconImage
-					{
-					width:100%;
-					height:100%;
-					}
 				.Name
 				{
 				background:transparent;
@@ -746,7 +717,7 @@ background:pink;
 				height:15%;
 				color:white;
 				text-align:left;
-				font-size:200%;
+				font-size:225%;
 				font-weight:bold;			
 				}
 				.Desc
@@ -763,7 +734,7 @@ background:pink;
 				height:50%;
 				color:white;
 				text-align:left;
-				font-size:150%;	
+				font-size:140%;	
 				overflow:auto;
 				}
 
@@ -973,6 +944,8 @@ background:pink;
 		
 		
 /*END CONTENT SECTIONS*/
+
+/*MEDIA QUERIES*/
 @media screen and (max-width: 1200px)
 {
 		.MemName
@@ -1100,7 +1073,7 @@ background:pink;
 		}
 		
 }
-@media screen and (max-width: 800)
+@media screen and (max-width: 800px)
 {
 	.ParagraphStyle
 	{
@@ -1112,7 +1085,7 @@ background:pink;
 	font-size:250%;
 	}
 }
-@media screen and (max-width: 480)
+@media screen and (max-width: 480px)
 {
 	.ParagraphStyle
 	{
@@ -1125,8 +1098,7 @@ background:pink;
 	}
 	
 }
-
-
+/*MEDIA QUERIES*/
 
 
 

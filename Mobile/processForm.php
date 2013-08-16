@@ -3,7 +3,7 @@
 // Define some constants
 define( "RECIPIENT_NAME", "Gem Design" );
 define( "RECIPIENT_EMAIL", "info@gemdesign.me" );
-define( "EMAIL_SUBJECT", "Gem Design Contact Form message." );
+define( "EMAIL_SUBJECT", "Gem Design Contact Form message. (Mobile)" );
  
 // Read the form values
 $success = false;

@@ -2,59 +2,61 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-
+		<meta name="keywords" content="Gem Design, Grpahic Design , Cork, Web Design, Web Development, Photography" />
+		<meta name="description" content="Gem are a Design agency based in cork, we offer a wide variety of sevices including design for both web and print." />
+		<title>
+		Gem Design Mobile
+		</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<link rel="stylesheet" type="text/css" href="GemMobileStyle.css" media="screen" />
-			<link rel="stylesheet" href="Gallery/photoswipe.css" type="text/css" rel="stylesheet" />
-		<!--<script type='text/javascript'>
-			if (screen.width > 1000) {
-			document.location = "http://www.gemdesign.me/";
-			}
-		</script>-->
-		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-		<script src="Scripts/GemMobileScripts.js"></script>
-				<script type="text/javascript" src="Gallery/lib/klass.min.js"></script>
+		<link rel="stylesheet" href="Gallery/photoswipe.css" type="text/css" />
+		<script type='text/javascript'>
+
+		</script>
+		<script type='text/javascript' src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type='text/javascript' src="Scripts/GemMobileScripts.js"></script>
+		<script type="text/javascript" src="Gallery/lib/klass.min.js"></script>
 		<script type="text/javascript" src="Gallery/code.photoswipe-3.0.5.js"></script>
 	
 	
 	<script type="text/javascript">
-
+		// <![CDATA[
+		if (screen.width > 6000)
+		{
+			document.location = "http://www.gemdesign.me/";
+		}
+		
 		(function(window, PhotoSwipe){
 		
 			document.addEventListener('DOMContentLoaded', function(){
 			
 				var
 					options = {},
-					gallery1Instance = PhotoSwipe.attach( window.document.querySelectorAll('#Gallery1 a'), options );
+					gallery1Instance = PhotoSwipe.attach( window.document.querySelectorAll('.Gallery1 a'), options );
 			
 			}, false);
 			
 			
 		}(window, window.Code.PhotoSwipe));
-		
+		// ]]>
 	</script>
-		
-	<meta name="keywords" content="" />
-	<meta name="description" content="" />
-		<title>
-		Gem Design Mobile
-		</title>
 
 	</head>
 
 	<body>
-		<div id = "LightBoxCover">
+	
+	<div id = "LightBoxCover">
 		<div id = "LBContent">
-			<div id = "Exit"><img src = "Images/XButtonGem.png"/></div>
+			<div id = "Exit"><img src = "Images/XButtonGem.png" alt= "Exit"/></div>
 		</div>
 	</div>
 		<div id = "LogoBox">
 			<div class = "sides">
-			<div id = "BtnBack"><img src ="Images/Mobile/back_btn.png" width = "100%" height = "100%" /></div>
+			<div id = "BtnBack"><img src ="Images/Mobile/back_btn.png" width = "100%" height = "100%" alt= "Back"/></div>
 			</div>
-			<div id="Logo"><img src ="Images/Mobile/logo-mobile.png" width = "100%" height = "100%" /></div>
+			<div id="Logo"><img src ="Images/Mobile/logo-mobile.png" width = "100%" height = "100%" alt= "Gem Logo"/></div>
 			<div class = "sides"></div>	
 		</div>
 		<div id = "Landing">
@@ -62,56 +64,56 @@
 			<div id = "Menu">
 				<div id = "BtnWho">
 					<span class = "BtnText">Who we are</span>
-					<div class = "Arrow"><img src = "Images/Mobile/whitearrow.png" /></div>
+					<div class = "Arrow"><img src = "Images/Mobile/whitearrow.png" alt= "Open"/></div>
 				</div>
 				<div id = "BtnGraphics">
 					<span class = "BtnText">Graphic Design</span>
-					<div class = "Arrow"><img src = "Images/Mobile/whitearrow.png" /></div>
+					<div class = "Arrow"><img src = "Images/Mobile/whitearrow.png" alt= "Open"/></div>
 				</div>
 				<div id = "BtnPhoto">
 					<span class = "BtnText">Photography</span>
-					<div class = "Arrow"><img src = "Images/Mobile/whitearrow.png" /></div>
+					<div class = "Arrow"><img src = "Images/Mobile/whitearrow.png" alt= "Open"/></div>
 				</div>
 				<div id = "BtnWeb">
 					<span class = "BtnText">Web Dev.</span>
-					<div class = "Arrow"><img src = "Images/Mobile/whitearrow.png" /></div>
+					<div class = "Arrow"><img src = "Images/Mobile/whitearrow.png" alt= "Open"/></div>
 				</div>
 				<div id = "BtnPort">
-				<span class = "BtnText">Portfolio</span>
-				<div class = "Arrow"><img src = "Images/Mobile/whitearrow.png" /></div>
+					<span class = "BtnText">Portfolio</span>
+					<div class = "Arrow"><img src = "Images/Mobile/whitearrow.png" alt= "Open"/></div>
 				</div>
 				<div id = "BtnMeet">
-				<span class = "BtnText">Meet the team</span>
-				<div class = "Arrow"><img src = "Images/Mobile/whitearrow.png" /></div>
+					<span class = "BtnText">Meet the team</span>
+					<div class = "Arrow"><img src = "Images/Mobile/whitearrow.png" alt= "Open"/></div>
 				</div>
 				<div id = "BtnContact">
-				<span class = "BtnText">Let's talk</span>
-				<div class = "Arrow"><img src = "Images/Mobile/whitearrow.png" /></div>
+					<span class = "BtnText">Let's talk</span>
+					<div class = "Arrow"><img src = "Images/Mobile/whitearrow.png" alt= "Open"/></div>
 				</div>
 			</div>
 			<div id = "Social">
-				<a href="tel:+353863775544"><img class = "SocialIcon" src = "Images/Mobile/phone.png" /></a>
-				<a href ="https://www.facebook.com/GemDesignMe" target = "_blank"><img class = "SocialIcon" src = "Images/Mobile/facebook.png" /></a>
-				<a href ="https://twitter.com/gemdesignme" target = "_blank"><img class = "SocialIcon" src = "Images/Mobile/twitter.png" /></a>
-				<a href="skype:aisling.henno?call"><img class = "SocialIcon" src = "Images/Mobile/skype.png" /></a>
-				<a href ="http://www.linkedin.com/company/gem-design---graphics-elegantly-made" target = "_blank"><img class = "SocialIcon" src = "Images/Mobile/linkdin.png" /></a>
-				<a href ="http://pinterest.com/gemdesignme/" target = "_blank"><img class = "SocialIcon" src = "Images/Mobile/pinterest.png" /></a>
+				<a href="tel:+353863775544"><img class = "SocialIcon" src = "Images/Mobile/phone.png" alt = "Call"/></a>
+				<a href ="https://www.facebook.com/GemDesignMe" target = "_blank"><img class = "SocialIcon" src = "Images/Mobile/facebook.png" alt= "Facebook"/></a>
+				<a href ="https://twitter.com/gemdesignme" target = "_blank"><img class = "SocialIcon" src = "Images/Mobile/twitter.png" alt= "Twitter"/></a>
+				<a href="skype:aisling.henno?call"><img class = "SocialIcon" src = "Images/Mobile/skype.png" alt= "Skype"/></a>
+				<a href ="http://www.linkedin.com/company/gem-design---graphics-elegantly-made" target = "_blank"><img class = "SocialIcon" src = "Images/Mobile/linkdin.png" alt= "LinkedIn"/></a>
+				<a href ="http://pinterest.com/gemdesignme/" target = "_blank"><img class = "SocialIcon" src = "Images/Mobile/pinterest.png" alt= "Pinterest"/></a>
 			</div>
 		</div>
 		<div id = "Content">
 		<div id = "WhoWeAre">
 			<div id = "WhoWeAre-Heading" class = "HeadingStyle">WHO<br /> ARE<br /> GEM<br /> DESIGN</div>
 			<div id = "WhoWeAre-Content1" class = "ParagraphStyle">
-			Gem are a Design agency based in cork, we offer a wide variety of sevices including design for both web and print. We also
+			Gem are a Design agency based in Cork, we offer a wide variety of sevices including design for both web and print. We also
 			have a team of web developers here at gem and skilled photographers. If you have a project you'd like to discuss then contact
 			gem design and tell us your ideas.
 			</div>
 			<img class = "LineDrawing" src = "Images/lightbulb.png" alt= "Lightbulb" width= "100%" height = "100%"/>
 			<div id = "WhoWeAre-Content2" class = "ParagraphStyle">
 			Call us <br />today and <br />see how we <br />can help you <br />and your business <br />stand out from the<br /> crowd. 
-			<span class = "NoWrap">T:(0)21 4612 345</span><br />
-			<span class = "NoWrap">E: info@gemdesign.com</span><br />
-			<a href= "#MeetTheTeam">Why not meet the team >></a>
+			<span class = "NoWrap">Tel: +353(0)863775544</span><br />
+			<span class = "Norap">Email: info@gemdesign.me</span><br />
+			<a href= "#MeetTheTeam">Why not meet the team >>></a>
 			</div> 
 		</div>
 		<div id = "GraphicDesign">
@@ -119,21 +121,20 @@
 			<div id = "GraphicDesign-Content1" class = "ParagraphStyle">
 			Here at Gem Design we can develop a logo that truly represents your company. We offer
 			competitive packages for stationary, flyers, posters, pop-up banners, as well as developing a
-			strong and comprehensive online web presence.
+			strong and comprehensive online web presence. Get in touch with us today.
 			</div>
 			<img class = "LineDrawing" src = "Images/pencil.png" alt= "pencil" width= "100%" height = "100%"/>
 			<div id = "GraphicDesign-Content2" class = "ParagraphStyle">
 			We'd Love to<br />hear from you, so<br />give us a call or get<br />in touch with gem design<br />
-			<span class = "NoWrap">Todat. Tel :(0)21 4612 345</span><br />
-			<span class = "Norap">E-Mail: info@gemdesign.com</span><br />
-			<span class = "Norap">www.facebook.com/gemdesign</span>
+			<span class = "NoWrap">Today. Tel: +353(0)863775544</span><br />
+			<span class = "Norap">E-Mail: info@gemdesign.me</span><br />
 			</div>
 		</div>
 		<div id = "Photography">
 			<div id = "Photography-Heading" class = "HeadingStyle">Professional<br />Photography<br />BY<br />GEM</div>
 			<div id = "Photography-Content" class = "ParagraphStyle">
 			To help create truly<br /> unique and tailored<br /> visuals for your website<br /> and print materials we<br /> have a talented team of<br /> photographers
-			on hand<br /> to capture the true<br /> essence of your business.<br /><a href = "#">See our work >>></a>
+			on hand<br /> to capture the true<br /> essence of your business.<br /><a href = "#Portfolio">See our work >>></a>
 			</div>
 			<img class = "LineDrawing" src = "Images/camera.png" alt= "Camera" width= "100%" height = "100%"/>
 		</div>
@@ -148,53 +149,53 @@
 		<div id = "Portfolio">
 			<!--<img class = "LineDrawing" src = "Images/arrow.png" alt= "Arrow" width= "100%" height = "100%"/>-->
 			<div id = "Portfolio-Heading" class = "HeadingStyle">View our Portfolio</div>
-			<div id = "Portfolio-Content" class = "ParagraphStyle">Why not have peak at our portfolio? Just click to see more.
+			<div id = "Portfolio-Content" class = "ParagraphStyle">Why not have a peak at our portfolio? Just click to see more.
 			</div>
 			
 			<div id = "PortBox">
 				<div class = "PortSquare">
-					<ul id="Gallery1" class="gallery">
+					<ul class="Gallery1 gallery">
 						<li><a href="Images/Portfolio/bizcard-design.jpg"><img src="Images/Portfolio/bizcard-design-thumb.jpg" alt="Gem Business Cards" /></a></li>
 					</ul>
 				</div>
 				<div class = "PortSquare">
-					<ul id="Gallery1" class="gallery">
+					<ul class="Gallery1 gallery">
 				
 					<li><a href="Images/Portfolio/bollywood-screen.jpg"><img src="Images/Portfolio/bollywood-screen.jpg" alt="bollywoodlounge.ie" /></a></li>				
 					</ul>
 				</div>
 				<div class = "PortSquare">
-					<ul id="Gallery1" class="gallery">
+					<ul class="Gallery1 gallery">
 						<li><a href="Images/Portfolio/Bollywood/Bollywood-Photo-02.jpg"><img src="Images/Portfolio/Bollywood/Bollywood-Photo-02-Thumb.jpg" alt="Bollywood Lounge: Photography" /></a></li>
 					</ul>
 				</div>
 				<div class = "PortSquare">
-					<ul id="Gallery1" class="gallery">
+					<ul class="Gallery1 gallery">
 						<li><a href="Images/Portfolio/Bollywood/Bollywood-Photo-01.jpg"><img src="Images/Portfolio/Bollywood/Bollywood-Photo-01-Thumb.jpg" alt="Bollywood Lounge: Photography" /></a></li>
 					</ul>
 				</div>
 				<div class = "PortSquare">
-					<ul id="Gallery1" class="gallery">
+					<ul class="Gallery1 gallery">
 						<li><a href="Images/Portfolio/bunnys-screen-2.jpg"><img src="Images/Portfolio/bunnys-screen-2-thumb.jpg" alt="bunnyconnellan.ie" /></a></li>
 					</ul>
 				</div>
 				<div class = "PortSquare">
-					<ul id="Gallery1" class="gallery">			
+					<ul class="Gallery1 gallery">			
 					<li><a href="Images/Portfolio/bunnyconnellan/Bunnys-Photo-1.jpg"><img src="Images/Portfolio/bunnyconnellan/Bunnys-Photo-1-Thumb.jpg" alt="Bunnyconnellan Photography" /></a></li>		
 					</ul>
 				</div>
 				<div class = "PortSquare">
-					<ul id="Gallery1" class="gallery">
+					<ul class="Gallery1 gallery">
 					<li><a href="Images/Portfolio/bunnyconnellan/Bunnys-Photo-2.jpg"><img src="Images/Portfolio/bunnyconnellan/Bunnys-Photo-2-Thumb.jpg" alt="Bunnyconnellan Photography" /></a></li>
 					</ul>
 				</div>
 				<div class = "PortSquare">
-					<ul id="Gallery1" class="gallery">	
+					<ul class="Gallery1 gallery">
 					<li><a href="Images/Portfolio/bunnys-midsummer.jpg"><img src="Images/Portfolio/bunnys-midsummer-thumb.jpg" alt="Bunnyconnellan Midsummer Event Poster"/></a></li>
 					</ul>
 				</div>
 				<div class = "PortSquare">
-					<ul id="Gallery1" class="gallery">
+					<ul class="Gallery1 gallery">
 						<li><a href="Images/Portfolio/bunnys-august.jpg"><img src="Images/Portfolio/bunnys-august-thumb.jpg" alt="Bunnyconnellan August Event Poster" /></a></li>
 
 					</ul>
@@ -204,7 +205,6 @@
 			
 		</div>
 		<div id = "MeetTheTeam">
-			<!--<img class = "LineDrawing" src = "Images/arrow.png" alt= "Arrow" width= "100%" height = "100%"/>-->
 			<div id = "MeetTheTeam-Heading"> <span class = "HeadingStyle">Meet<br />Gem<br /></span>
 			</div>
 			<div id = "MeetTheTeam-Content" class = "ParagraphStyle">
@@ -215,90 +215,93 @@
 			<div id = "TeamBox">
 			 <div id = "TeamFrame">
 				<div class = "MemberSquare">
-				<img class ="MemImage" src = "Images/Team/BarryDelaney.jpg" />
 					<div class="Cover">
-						<span class = "MemName">Barry <span class = "Surname">Delaney</span></span>
-						<img class ="GemIcon" src = "Images/gemicon.png" />
+						<span class = "MemName">Aisling <span class = "Surname">Hennessy</span></span>
+						<img class ="GemIcon" src = "Images/gemicon.png" alt ="Gem Icon"/>
 						<span class = "MemTitle">Creative Director</span>
-						<span class = "Desc">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-						ut labore et dolore magna aliqua. Ut enim ad minim veniam."</span>
+						<span class = "Desc">"Aisling graduated from University College Cork with a degree 
+						in Business Information Systems and has since studied Interactive Media and Graphic Design.
+						She has a huge interest in Future and Emerging Technology, Human Computer Interaction and most
+						of all Design, in all its forms. Give her a call if you wish to talk about a new project that you
+						would like to take to the next level in its Design or Development."</span>
 					</div>
 				</div>
 				<div class = "MemberSquare">
-				<img class ="MemImage" src = "Images/Team/BarryDelaney.jpg" />
 					<div class="Cover">
-						<span class = "MemName">Barry <span class = "Surname">Delaney</span></span>
-						<img class ="GemIcon" src = "Images/gemicon.png" />
+						<span class = "MemName">Gillian <span class = "Surname">Powell</span></span>
+						<img class ="GemIcon" src = "Images/gemicon.png" alt ="Gem Icon"/>
 						<span class = "MemTitle">Graphic Designer</span>
-						<span class = "Desc">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-						ut labore et dolore magna aliqua. Ut enim ad minim veniam."</span>
+						<span class = "Desc">"Gillian graduated in 2009 with a BA in Multimedia from Cork Institute
+						of Technology, and has a FETAC Level 5 in Graphic Design from Colaiste Stiofain Naofa. She has worked 
+						freelance for the last 4 years as a graphic and web designer and is proficient in HTML, CSS, Javascript,
+						Flash Actionscript, Final Cut Pro, and the Adobe Creative Suite."</span>
 					</div>
 				</div>
 				<div class = "MemberSquare">
-				<img class ="MemImage" src = "Images/Team/BarryDelaney.jpg" />
 					<div class="Cover">
-						<span class = "MemName">Barry <span class = "Surname">Delaney</span></span>
-						<img class ="GemIcon" src = "Images/gemicon.png" />
+						<span class = "MemName">Geraldine  <span class = "Surname">Twomey</span></span>
+						<img class ="GemIcon" src = "Images/gemicon.png" alt ="Gem Icon"/>
 						<span class = "MemTitle">Photographer</span>
-						<span class = "Desc">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-						ut labore et dolore magna aliqua. Ut enim ad minim veniam."</span>
+						<span class = "Desc">"I am very passionate about all aspects of Design. I have a background in Fine Art 
+						and specialised in Photography and image processing. I would describe myself now as a digital artist/photographer.
+						My favourite programs to work with are Adobe Photoshop, Illustrator and InDesign which collectively help me to bring
+						the client’s vision to life and I can’t wait to start work with you."</span>
 					</div>
 				</div>
 				<div class = "MemberSquare">
-				<img class ="MemImage" src = "Images/Team/BarryDelaney.jpg" />
 					<div class="Cover">
 						<span class = "MemName">Barry <span class = "Surname">Delaney</span></span>
-						<img class ="GemIcon" src = "Images/gemicon.png" />
+						<img class ="GemIcon" src = "Images/gemicon.png" alt ="Gem Icon"/>
 						<span class = "MemTitle">Web Developer</span>
-						<span class = "Desc">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-						ut labore et dolore magna aliqua. Ut enim ad minim veniam."</span>
+						<span class = "Desc">"I am currently studying Business Information Systems at UCC and
+						I will be in the third year of the course this year. My interest in web development was sparked by a first year
+						module in Internet Development. This led me to design and build my own website. Since then I have made websites for others and
+						this has helped me develop my skills in HTML, CSS3, jQuery and PHP."
+						</span>
 					</div>
 				</div>
 				<div class = "MemberSquare">
-				<img class ="MemImage" src = "Images/Team/BarryDelaney.jpg" />
 					<div class="Cover">
-						<span class = "MemName">Barry <span class = "Surname">Delaney</span></span>
-						<img class ="GemIcon" src = "Images/gemicon.png" />
+						<span class = "MemName">Robin <span class = "Surname">Screech</span></span>
+						<img class ="GemIcon" src = "Images/gemicon.png" alt ="Gem Icon"/>
 						<span class = "MemTitle">Web Developer</span>
-						<span class = "Desc">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-						ut labore et dolore magna aliqua. Ut enim ad minim veniam."</span>
+						<span class = "Desc">"My name is Robin and I am a graduate with a BA in Multimedia
+						from Cork Institute of Technology with joint-accreditation from Hochschule Darmstadt
+						in Germany. I have a keen interest in HTML5, CSS3, Jquery and exploring new API's while
+						developing modern up to date websites."</span>
 					</div>
 				</div>
 				<div class = "MemberSquare">
-				<!--<img class ="MemImage" src = "Images/Team/BarryDelaney.jpg" /> -->
-					<div class="Empty">
-						<span class = "MemName">Name<span class = "Surname">Surname</span></span>
-						<img class ="GemIcon" src = "Images/gemicon.png" />
-						<span class = "MemTitle">Web Developer/Graphic Designer/Photographer/Creative Director</span>
-						<span class = "Desc">Description</span>
+					<div class="Cover">
+						<span class = "MemName">Ray <span class = "Surname">Keohane</span></span>
+						<img class ="GemIcon" src = "Images/gemicon.png" alt ="Gem Icon"/>
+						<span class = "MemTitle">Graphic Designer</span>
+						<span class = "Desc">"I will always consider myself a student of design and constantly
+						strive to incorporate contemporary graphics with innovative ideas. I am a creative and
+						motivated person, who loves seeing a project come to life."
+						</span>
 					</div>
 				</div>
 				<div class = "MemberSquare">
-				<!--<img class ="MemImage" src = "Images/Team/BarryDelaney.jpg" /> -->
-					<div class="Empty">
-						<span class = "MemName">Name<span class = "Surname">Surname</span></span>
-						<img class ="GemIcon" src = "Images/gemicon.png" />
-						<span class = "MemTitle">Web Developer/Graphic Designer/Photographer/Creative Director</span>
-						<span class = "Desc">Description</span>
+					<div class="Cover">
+						<span class = "MemName">Sinead <span class = "Surname">Morris</span></span>
+						<img class ="GemIcon" src = "Images/gemicon.png" alt ="Gem Icon"/>
+						<span class = "MemTitle">Photographer</span>
+						<span class = "Desc">"One of our resident photographers,
+						Sinead holds qualifications in both graphic design and photography both of which inform her distinctive
+						photographic vision. When not pursuing her lifelong dream of photography in all forms, she likes to write, paint and draw."
+						</span>
 					</div>
 				</div>
 				<div class = "MemberSquare">
-				<!--<img class ="MemImage" src = "Images/Team/BarryDelaney.jpg" /> -->
-					<div class="Empty">
-						<span class = "MemName">Name<span class = "Surname">Surname</span></span>
-						<img class ="GemIcon" src = "Images/gemicon.png" />
-						<span class = "MemTitle">Web Developer/Graphic Designer/Photographer/Creative Director</span>
-						<span class = "Desc">Description</span>
-					</div>
+				<span class = "MemName">Susan <span class = "Surname">Mulcahy</span></span>
+						<img class ="GemIcon" src = "Images/gemicon.png" alt ="Gem Icon"/>
+						<span class = "MemTitle">Graphic Designer</span>
 				</div>
 				<div class = "MemberSquare">
-				<!--<img class ="MemImage" src = "Images/Team/BarryDelaney.jpg" /> -->
-					<div class="Empty">
-						<span class = "MemName">Name<span class = "Surname">Surname</span></span>
-						<img class ="GemIcon" src = "Images/gemicon.png" />
-						<span class = "MemTitle">Web Developer/Graphic Designer/Photographer/Creative Director</span>
-						<span class = "Desc">Description</span>
-					</div>
+				<span class = "MemName">Sadhbh <span class = "Surname">McCarthy</span></span>
+						<img class ="GemIcon" src = "Images/gemicon.png" alt ="Gem Icon"/>
+						<span class = "MemTitle">Graphic Designer</span>
 				</div>
 
 			</div>
@@ -306,10 +309,10 @@
 
 		</div>
 		<div id = "GetInTouch">
-			<form method="post" id = "contact" onsubmit = "return validate()" action="contact.php">
-				<input class = "contactbox" value = "name" type="text" name = "Name" onFocus="clearField(this);" onBlur="checkField(this);"/>
-				<input class = "contactbox" value = "e-mail" type="text" name = "EmailFrom" onFocus="clearField(this);" onBlur="checkField(this);"/>
-				<textarea class = "commentbox" name = "Comments" onFocus="clearField(this);" onBlur="checkField(this);">message</textarea>
+			<form method="post" id = "contact"  action="processForm.php">
+				<input class = "contactbox" value = "name" type="text" id = "senderName" name = "senderName" onfocus="clearField(this)" onblur="checkField(this)"/>
+				<input class = "contactbox" value = "e-mail" type="text" id = "senderEmail" name = "senderEmail" onfocus="clearField(this)" onblur="checkField(this)"/>
+				<textarea class = "commentbox" rows = "" cols = "" id = "message" name = "message" onfocus="clearField(this)" onblur="checkField(this)">message</textarea>
 				<input type="image" id = "BtnSend" src= "Images/Contact/send-button.png" alt="Submit Form" />
 				<span id = "Alert">Please fill out all sections.</span>
 			</form>

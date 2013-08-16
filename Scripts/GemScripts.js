@@ -77,6 +77,12 @@ function checkField(field) {
 //MEET THE TEAM HOVER AND CLICK CODE
 $( document ).ready(function(){
 
+
+	if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1)
+	{
+		w = $('#Logo').width()
+		$('#Logo').css('width', w + 1);
+	}
 	$('#contact').submit( submitForm );
 
 	$('#BtnWho').css('color', '#faa719');
@@ -119,8 +125,12 @@ $( document ).ready(function(){
 	
 $('.Cover').click(function(){
 		$('#LightBoxCover').css('display','block');
-		$('#LBContent').css('height','50%');
-		$('#LBContent').prepend('<div class = "Picture"></div><div class = "Name">' + $(this).children('.MemName').text() + '<br />' + $(this).children('.MemTitle').html() + '<div id = "Icon"><img class = "IconImage" src = "Images/' + icon + '.png" /></div></div><div class = "Description">' + $(this).children('.Desc').html() + '</div>');
+		$('#LBContent').prepend('<div class = "Picture"></div><div class = "Name">' + $(this).children('.MemName').text() + '<br />' + $(this).children('.MemTitle').html() + '<div id = "Icon"></div></div><div class = "Description">' + $(this).children('.Desc').html() + '</div>');
+		if (icon == 'lightbulb')
+		{
+			icon = 'lightbulb-meetTheTeam';
+		}
+		$('#Icon').css('background-image', 	'url(' + "Images/" + icon + ".png" + ')');
 		$('.Picture').css('background-image', 	'url(' + $(this).parent('.MemberSquare').css('background-image').replace(/^url|[\(\)]/g, '') + ')');
 		$('.Picture').css('background-position', $(this).parent('.MemberSquare').css('background-position'));
 	});
@@ -158,7 +168,8 @@ $('.PortSquare').hover(function(){
 	distance = parseInt(myLeft, 10) / parseInt(myRight, 10);
 	if((distance * 100) > 86)
 	{
-		getTeaserDimensions($(this).children('.grouped_elements').children('.preload').attr('src'));
+		getTeaserDimensions($(this).children('.grouped_elements').children('.preload').width(), $(this).children('.grouped_elements').children('.preload').height());
+		
 		$(this).append('<div class = "TeaserBox"><div class = "PortImage"><img src = "' + $(this).children('.grouped_elements').filter(":first").attr('href') + '" width = "100%" height = "100%" alt = ""/></div><div class = "PortInfo">' + $(this).children('.info').html() + '</div></div>');
 		if((($(this).position().top)/($('#PortBox').height())) > .7)
 		{
@@ -172,8 +183,8 @@ $('.PortSquare').hover(function(){
 	}
 	else
 	{
-		getTeaserDimensions($(this).children('.grouped_elements').children('.preload').attr('src'));
-
+		getTeaserDimensions($(this).children('.grouped_elements').children('.preload').width(), $(this).children('.grouped_elements').children('.preload').height());
+		
 		$(this).append('<div class = "TeaserBox"><div class = "PortImage"><img src = "' + $(this).children('.grouped_elements').filter(":first").attr('href') + '" width = "100%" height = "100%" alt = ""/></div><div class = "PortInfo">' + $(this).children('.info').html() + '</div></div>');
 		if((($(this).position().top)/($('#PortBox').height())) > .7)
 		{
@@ -193,12 +204,10 @@ $('.PortSquare').hover(function(){
 	var tWidth= '100%';
 	var tHeight= '100%';
 
-	function getTeaserDimensions(src)
+	function getTeaserDimensions(width, height)
 	{
-		var theImage = new Image();
-		theImage.src = src;
-		tWidth = theImage.width;
-		tHeight = theImage.height;
+		tWidth = width;
+		tHeight = height;
 		
 		var pxWidth = $('.PortSquare').width();
 		

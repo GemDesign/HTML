@@ -13,30 +13,41 @@ function Scrolling(sectiontogoto){
 		$('html,body').animate({scrollTop: $(sectiontogoto).offset().top - LogoHeight}, 500);
 };
 $( document ).ready(function(){
+
+		$('#contact').submit( submitForm );
+
 	$('#BtnWho').click(function(){
+			$('#LogoBox').css('height', '20%');
 			Scrolling("#WhoWeAre");
 	});
 	$('#BtnGraphics').click(function(){
+			$('#LogoBox').css('height', '20%');
 			Scrolling("#GraphicDesign");
 	});
 	$('#BtnPhoto').click(function(){
+			$('#LogoBox').css('height', '20%');
 			Scrolling("#Photography");
 	});
 	$('#BtnWeb').click(function(){
+			$('#LogoBox').css('height', '20%');
 			Scrolling("#WebDevelopment");
 	});
 	$('#BtnPort').click(function(){
+			$('#LogoBox').css('height', '20%');
 			Scrolling("#Portfolio");
 	});
 	$('#BtnMeet').click(function(){
+			$('#LogoBox').css('height', '20%');
 			Scrolling("#MeetTheTeam");				
 	});
 	$('#BtnContact').click(function(){
+			$('#LogoBox').css('height', '20%');
 			Scrolling("#GetInTouch");
 	});
 	
 	
 $('#BtnBack').click(function(){
+		$('#LogoBox').css('height', '25%');
 		$('#Content').css('display','none');
 		$('#Landing').fadeIn();
 		$(this).css('display', 'none');
@@ -46,6 +57,57 @@ $('#BtnBack').click(function(){
 });
 
 //CODE FOR CONTACT FORM
+function submitForm() {
+  var contactForm = $(this);
+  
+  if ( !$('#senderName').val() || !$('#senderEmail').val() || !$('#message').val() )
+    {
+		$("#Alert").css('display', 'block');
+		$("#Alert").css('background', '#faa719');
+		$("#Alert").text("Please fill out all sections.")
+	}
+	else if($('#senderName').val() == 'name' || $('#senderEmail').val() == 'e-mail'|| $('#message').val() == 'message')
+	{
+		$("#Alert").css('display', 'block');
+		$("#Alert").css('background', '#faa719');
+		$("#Alert").text("Please fill out all sections.")
+	}
+	else if (($('#senderEmail').val()).indexOf('@') === -1)
+	{
+		$("#Alert").css('display', 'block');
+		$("#Alert").css('background', '#faa719');
+		$("#Alert").text("Please enter a valid e-mail address.")
+	}
+	else
+	{
+	$.ajax({
+		url: contactForm.attr( 'action' ) + "?ajax=true",
+		type: contactForm.attr( 'method' ),
+		data: contactForm.serialize(),
+		success: submitFinished
+		});
+  }
+  return false;
+};
+function submitFinished( response ) {
+  response = $.trim( response );
+ 
+  if ( response == "success" ) 
+	{
+		$("#Alert").css('display', 'block');
+		$("#Alert").css('background', '#faa719');
+		$("#Alert").text("Message sent!");
+		$("#senderName").val('name');
+		$('#senderEmail').val('e-mail');
+		$('#message').val('message');
+	} 
+	else 
+	{
+		$("#Alert").css('display', 'block');
+		$("#Alert").css('background', '#faa719');
+		$("#Alert").text("There was an error. Please make sure your e-mail is valid.")
+  }
+};
 function clearField(field) {
   if (field.value == field.defaultValue) {
     field.value = "";
@@ -55,33 +117,6 @@ function checkField(field) {
   if (field.value == "") {
     field.value = field.defaultValue;
   }
-};
-function validate() {
-	var Name = $('input[type="text"][name=Name]').val();
-	var Email = $('input[type="text"][name=EmailFrom]').val();
-	var Comments = $('textarea[name=Comments]').val();
-	if (Email == "" || Name == "" || Comments == ""){
-		$("#Alert").css('display', 'block');
-		$("#Alert").css('background', 'red');
-		$("#Alert").text("Please fill out all sections.")
-		return false;
-		}
-		else if(Email == "e-mail" || Name == "name" || Comments == "message")
-		{
-		$("#Alert").css('display', 'block');
-		$("#Alert").css('background', 'red');
-		$("#Alert").text("Please fill out all sections.")
-		return false;
-		}
-		else
-		{
-		$("#Alert").css('background', 'green');
-		$("#Alert").text("Message sent!")
-		$("#Name").val('name');
-		$('#EmailFrom').val('e-mail');
-		$('#Comments').val('message');
-		return true;
-		}
 };
 
 
@@ -141,7 +176,15 @@ $('.Cover').click(function(){
 			icon = 'lightbulb';
 		}			
 		$('#LightBoxCover').css('display','block');
-		$('#LBContent').prepend('<div class = "Picture"><img class = "MemImage" src = "' + $('.Cover').siblings('img').attr('src') + '"/></div><div class = "Name">' + $(this).children('.MemName').text() + '<br />' + $(this).children('.MemTitle').html() + '<div id = "Icon"><img class = "IconImage" src = "Images/' + icon + '.png" /></div></div><div class = "Description">' + $(this).children('.Desc').html() + '</div>');
+		$('#LBContent').prepend('<div class = "Picture"></div><div class = "Name">' + $(this).children('.MemName').text() + '<br />' + $(this).children('.MemTitle').html() + '<div id = "Icon"></div></div><div class = "Description">' + $(this).children('.Desc').html() + '</div>');
+				if (icon == 'lightbulb')
+		{
+			icon = 'lightbulb-meetTheTeam';
+		}
+		$('#Icon').css('background-image', 	'url(' + "Images/" + icon + ".png" + ')');
+		$('.Picture').css('background-image', 	'url(' + $(this).parent('.MemberSquare').css('background-image').replace(/^url|[\(\)]/g, '') + ')');
+		$('.Picture').css('background-position', $(this).parent('.MemberSquare').css('background-position'));
+
 	});
 $('#Exit').click(function(){
 		$('.Picture').remove();
