@@ -410,6 +410,10 @@ background:pink;
 		height:90%;
 		right:2%;
 		}
+			.thumb
+			{
+				position:absolute;
+			}
 		.PortSquare
 		{
 		float:left;
@@ -437,6 +441,7 @@ background:pink;
 			position:absolute;
 			top:0px;
 			left:0px;
+			border:5px solid #f05a28;
 			background:#f05a28;
 			width:100%;
 			height:100%;
@@ -457,26 +462,25 @@ background:pink;
 			width:100%;
 			bottom:0px;
 			text-align:center;
+			
 			color:white;
 			}
+
 			.PortImage
 			{
 			background:transparent;
 			position:absolute;
-			width:95%;
-			left:2.5%;
-			top:3%;
-			height:97%;	
+			width:100%;
+			height:100%;	
 			}
 			.PortInfo
 			{
 			background:#f05a28;
 			color:white;
 			position:absolute;
-			width:94%;
-			padding:2%;
-			padding-left:3%;
-			padding-right:3%;
+			width: 100%;
+			left: -5px;
+			border: 5px solid #f05a28;
 			top:100%;
 			}
 			.PortInfo a
@@ -520,6 +524,8 @@ background:pink;
 		#TeamBox
 		{
 		position:absolute;
+		background-image:url('Images/frame.png');
+		background-size:100% 100%;
 		width:55%;
 		top:2%;
 		height:96%;
@@ -946,26 +952,6 @@ background:pink;
 /*END CONTENT SECTIONS*/
 
 /*MEDIA QUERIES*/
-@media screen and (max-width: 1200px)
-{
-		.MemName
-		{
-		font-size:100%;
-		}
-		.GemIcon
-		{
-		position:absolute;
-		margin:auto;
-		bottom:20%;
-		width:12%;
-		height:0%;
-		left:0%;
-		}
-		.MemTitle
-		{
-		font-size:100%;
-		}
-}
 @media screen and (max-width: 1400px)
 {
 	.ParagraphStyle
@@ -1017,6 +1003,37 @@ background:pink;
 		.Description
 		{
 		font-size:120%;
+		}
+}
+@media screen and (max-width: 1200px)
+{
+		#fancybox-right-ico {
+			left: auto !important;
+			right: 20px !important;
+			}
+		#fancybox-left-ico {
+			left:20px !important;
+			}
+		#Portfolio
+		{
+			height:80%;
+		}
+		.MemName
+		{
+		font-size:100%;
+		}
+		.GemIcon
+		{
+		position:absolute;
+		margin:auto;
+		bottom:20%;
+		width:12%;
+		height:0%;
+		left:0%;
+		}
+		.MemTitle
+		{
+		font-size:100%;
 		}
 }
 @media screen and (max-width: 1000px)
