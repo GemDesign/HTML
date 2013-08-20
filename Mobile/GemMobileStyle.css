@@ -66,9 +66,9 @@ Body
 font-family:PT, Gothic;
 font-size:14px;
 background:white;
-max-width:1000px;
+max-width:1024px;
 }
-@media screen and (max-width: 1000px)
+@media screen and (max-width: 1024px)
 {
 	Body
 	{
@@ -101,7 +101,7 @@ max-width:1000px;
 {
 position:fixed;
 width:100%;
-max-width:1000px;
+max-width:1024px;
 height:25%;
 background:white;
 z-index:3;
@@ -129,6 +129,7 @@ z-index:3;
 	{
 	position:relative;
 	float:left;
+	margin-left:0%;
 	width:50%;
 	height:100%;
 	z-index:1;
@@ -141,7 +142,7 @@ z-index:3;
 position:fixed;
 height:75%;
 width:100%;
-max-width:1000px;
+max-width:1024px;
 top:25%;
 }
 #Menu
@@ -302,7 +303,7 @@ width:100%;
 {
 position:absolute;
 width:100%;
-max-width:1000px;
+max-width:1024px;
 height:100%;
 left:0%;
 display:none;
@@ -972,7 +973,49 @@ background:pink;
 		left:5%;
 		}
 		
-		
+@media screen and (min-height: 600px) and (min-width: 950px)
+{
+	#Content
+	{
+	position:absolute;
+	width:100%;
+	max-width:1024px;
+	height:120%;
+	}
+	#TeamBox
+	{
+	width:80%;
+	left:10%;
+	}
+	#PortBox
+	{
+	width:70%;
+	left:15%;
+	}
+	#Logo {
+	width: 30%;
+	margin-left: 10%;
+	}
+	#BtnBack
+	{
+	width:40%;
+	}
+	#LBContent
+	{
+	width:50%;
+	left:25%;
+	}
+	.Description {
+	font-size:110%;
+	}
+	#Social
+	{
+	padding-left: 20%;
+	}
+	.SocialIcon {
+	width: 5%;
+	}
+}
 /*END CONTENT SECTIONS*/
 
 
